@@ -5,7 +5,7 @@ import { Eye, EyeOff, Mail, Lock } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
-import Navbar from '@/components/Hearder';
+import Navbar from '@/components/ui/NavBar';
 
 export default function LoginSignup() {
 
@@ -16,11 +16,11 @@ export default function LoginSignup() {
     <>
     <Navbar />
   
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white ">
 
       {/* Main Content */}
-      <div className="pt-24 pb-20 bg-linear-to-br from-purple-50 to-white min-h-screen">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="pt-24 pb-20 bg-linear-to-br from-purple-50 to-white min-h-screen ">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Side - Form */}
             <div>
@@ -122,7 +122,7 @@ export default function LoginSignup() {
             {/* Right Side - Image */}
             <div className="hidden md:block">
               <Image
-                src="/images/Rectangle 41998.png"
+                src="/images/Login Art.png"
                 alt="Heartivy Logo"
                 width={600}
                 height={400}

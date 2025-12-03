@@ -4,19 +4,19 @@ import { HeartPulse } from 'lucide-react'; // FIXED: Changed HeartActivity to He
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-white font-sans text-gray-800 flex flex-col my-8">
+    <div className="min-h-screen bg-white font-sans text-gray-800 flex flex-col ">
       
       {/* 1. Import Navbar */}
       <Navbar />
 
       {/* 2. Main Content Area */}
       <main className="grow max-w-7xl mx-auto px-6 py-12 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start my-52">
           
           {/* --- LEFT SIDE: Text Content --- */}
           <div className="pt-8">
             {/* Badge */}
-            <span className="inline-block bg-blue-100 text-blue-600 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+            <span className="inline-block bg-pink-100 text-pink-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
               Contact Us
             </span>
 
@@ -41,7 +41,7 @@ export default function ContactPage() {
             </div>
 
             {/* Heart Icon Circle */}
-            <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-purple-700">
+            <div className="w-14 h-14 bg-pink-100 rounded-full flex items-center justify-center text-pink-700">
                {/* FIXED: Used HeartPulse here */}
                <HeartPulse size={28} />
             </div>
