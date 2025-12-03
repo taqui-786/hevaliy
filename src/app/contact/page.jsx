@@ -4,7 +4,7 @@ import { HeartPulse } from 'lucide-react'; // FIXED: Changed HeartActivity to He
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-white font-sans text-gray-800 flex flex-col">
+    <div className="min-h-screen bg-white font-sans text-gray-800 flex flex-col my-8">
       
       {/* 1. Import Navbar */}
       <Navbar />
