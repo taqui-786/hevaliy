@@ -60,7 +60,7 @@ function HelpCentreNav() {
 // --- Main Page Component (Wrapping the content) ---
 export default function SupportPage() {
   return (
-    <div className="bg-white min-h-screen font-sans text-gray-800 flex flex-col">
+    <div className="bg-white min-h-screen font-sans text-gray-800 flex flex-col my-6">
       
       {/* 1. Import Header/Navbar */}
       <Navbar /> 

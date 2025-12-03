@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white font-sans text-gray-800">
+    <div className="min-h-screen bg-white font-sans text-gray-800 mt-6">
       {/* --- Navbar --- */}
     <Header></Header>
 

@@ -96,7 +96,7 @@ const suggestedTopics = [
 
 const CommunityPage = () => {
   return (
-    <div className="font-sans text-gray-800 bg-white min-h-screen">
+    <div className="font-sans text-gray-800 bg-white min-h-screen my-6">
 
       {/* 1. Header Component Import */}
       <Header />
@@ -322,26 +322,39 @@ const CommunityPage = () => {
 
         {/* Subscribe / Call to Action Section */}
         {/* 🎨 REVISED: Soft background and gentle styling */}
-        <section className="px-4 md:px-10 max-w-4xl mx-auto mb-20">
-          <div className="p-10 md:p-16 bg-[#f0f0f0] rounded-3xl text-center shadow-lg">
-            <h2 className="text-4xl font-bold mb-3 text-gray-800">
-              Subscribe to Find Calm, Hope, and Gentle Guidance from Heartivy
-            </h2>
-            <p className="text-gray-600 mb-8 max-w-md mx-auto text-sm">
-              Get weekly insights, community updates, and therapist-approved tools directly to your inbox. Join over 20,000 members.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center sm:space-x-4 space-y-4 sm:space-y-0 bg-white rounded-full shadow-sm max-w-md mx-auto p-1">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="py-3 px-5  w-full  rounded-full border border-gray-300 focus:outline-none focus:ring-purple-500 focus:border-purple-500"
-              />
-              <button className="bg-gray-600 text-white font-medium py-3 px-8 rounded-full shadow-md hover:bg-gray-700 transition w-full sm:w-auto">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </section>
+     <section className="px-4 md:px-10 max-w-4xl mx-auto mb-20">
+  <div className="p-6 sm:p-10 md:p-16 bg-[#f0f0f0] rounded-3xl text-center shadow-lg">
+
+    {/* Title */}
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-800 leading-tight">
+      Subscribe to Find Calm, Hope, and Gentle Guidance from Heartivy
+    </h2>
+
+    {/* Description */}
+    <p className="text-gray-600 mb-8 max-w-md mx-auto text-sm sm:text-base">
+      Get weekly insights, community updates, and therapist-approved tools directly to your inbox. Join over 20,000 members.
+    </p>
+
+    {/* Form */}
+    <form className="flex flex-col sm:flex-row items-center justify-center sm:space-x-3 space-y-3 sm:space-y-0 md:bg-white bg-transparent rounded-full md:shadow-md max-w-md mx-auto p-2">
+      
+      <input
+        type="email"
+        placeholder="Enter your email address"
+        className="py-3 px-5 w-full sm:flex-1 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+      />
+
+      <button
+        type="submit"
+        className="bg-gray-700 text-white font-medium py-3 px-8 rounded-full w-full sm:w-auto hover:bg-gray-900 transition"
+      >
+        Subscribe
+      </button>
+
+    </form>
+  </div>
+</section>
+
 
       </main>
 

@@ -18,6 +18,9 @@ export default function Navbar() {
     ];
 
     return (
+        <div className="absolute top-0 left-0 w-full z-50 md:bg-transparent bg-white/50 ">
+
+    
         <nav className="flex items-center justify-around px-6 py-5  ">
             {/* Logo */}
             <div className="flex gap-2">
@@ -33,7 +36,7 @@ export default function Navbar() {
             </div>
 
             {/* Desktop Links */}
-            <div className="hidden md:flex items-center gap-8 text-base backdrop-blur-2xl rounded-full bg-white/30 font-medium text-gray-700">
+            <div className="hidden md:flex items-center gap-8 text-base backdrop-blur-2xl px-8 py-3 rounded-full bg-white/30  font-medium text-gray-700">
                 {navLinks.map((link) => (
                     <Link
                         key={link.path}
@@ -93,5 +96,6 @@ export default function Navbar() {
                 </div>
             )}
         </nav>
+            </div>
     );
 }
