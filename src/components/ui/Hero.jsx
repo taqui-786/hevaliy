@@ -21,7 +21,7 @@ export default function Hero() {
       <Image src={heroBg} alt="hero" fill className="object-cover" />
 
       {/* Main Center Content */}
-      <div className="absolute md:inset-0 top-155 left-0 flex flex-col md:items-center md:justify-center md:text-center  px-6">
+      <div className="absolute md:inset-0 top-147 left-0 bottom  flex flex-col md:items-center md:justify-center md:text-center  px-6">
         <h1
           className="
           text-5xl lg:text-6xl md:text-4xl font-extrabold

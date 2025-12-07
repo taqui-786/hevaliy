@@ -3,7 +3,7 @@ import { Nunito_Sans, Poppins } from "next/font/google";
 
 const nunito = Nunito_Sans({
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800"], // light-medium-regular-bold
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
 const poppins = Poppins({
@@ -13,48 +13,56 @@ const poppins = Poppins({
 
 export default function SubscribeSection() {
   return (
-    <section className={`px-4 md:px-10 max-w-5xl mx-auto mb-40 ${poppins.className}`} >
+    <section
+      className={`px-4 md:px-10 max-w-5xl mx-auto mb-40 ${poppins.className}`}
+    >
       {/* Card */}
-      <div className="relative max-w-6xl w-full rounded-4xl bg-[#EDEDED] overflow-hidden ">
+      <div className="relative max-w-6xl w-full rounded-4xl bg-[#EDEDED] overflow-hidden">
 
         {/* Background Image */}
         <Image
           src="/images/Lines_newsletter_bg.svg"
           alt="Background"
           fill
-          className="object-contain mix-blend-multiply  "
+          className="object-contain mix-blend-multiply"
         />
 
-        <div className="relative z-[2] text-center px-6 md:px-20 py-6 md:py-16">
-          
+        <div className="relative z-[2] text-center px-6 md:px-20 py-8 md:py-16">
+
           {/* Small Heading */}
-          <p className="text-gray-900 text-md tracking-wide font-medium mb-3">
+          <p className="text-gray-900 text-md tracking-wide font-medium mb-2 md:mb-3">
             Our Journal of Healing
           </p>
 
           {/* Main Heading */}
-          <h2 className="text-md md:text-[40px] font-semibold text-[#625A60] leading-tight">
-            Subscribe to Find Calm, Hope, and <br className="hidden md:block" />
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[40px] font-semibold text-[#625A60] leading-tight">
+            Subscribe to Find Calm, Hope, and{" "}
+            <br className="hidden md:block" />
             Gentle Guidance from Heartivy
           </h2>
 
           {/* Subline */}
-          <p className="text-[#808080] text-xs md:text-sm text-justify  mx-auto md:mt-6 mt-8 md:leading-relaxed  px-32 md:px-0">
-            Join our circle of care — receive comforting stories, mindful reflections, 
+          <p className="text-[#808080] text-xs sm:text-sm text-center sm:text-justify mx-auto md:mt-6 mt-4 md:leading-relaxed max-w-md">
+            Join our circle of care — receive comforting stories, mindful reflections,
             and emotional wellness tips right in your inbox.
           </p>
 
           {/* Input + Button */}
-          <div className="md:mt-10 mt-6 bg-white flex flex-row items-center justify-between gap-3 mx-auto w-full max-w-xl md:px-2 md:py-1.5 py-1 px-3 rounded-full">
+          <div className="mt-6 md:mt-10 bg-white flex items-center gap-2 mx-auto w-full max-w-xl px-3 py-1 md:px-2 md:py-1.5 rounded-full">
+
             <input
               type="email"
               placeholder="Enter your email to begin your gentle journey"
-              className="w-full sm:flex-1 px-4 py-2 rounded-full text-sm font-medium outline-none"
+              className="w-full px-3 py-2 text-xs sm:text-sm rounded-full font-medium outline-none"
             />
-            <button className="bg-[#8F7A9C] hidden md:block text-white px-5 py-3.5 rounded-full text-[14px]  hover:opacity-90 transition">
+
+            {/* Desktop Button */}
+            <button className="hidden  whitespace-nowrap md:block bg-[#8F7A9C] text-white px-5 py-3.5 rounded-full text-[14px] hover:opacity-90 transition">
               Join the Circle
             </button>
-            <button className="bg-[#8F7A9C] md:hidden text-white px-8 py-2 rounded-full text-[12px]  hover:opacity-90 transition">
+
+            {/* Mobile Button */}
+            <button className="md:hidden bg-[#8F7A9C] text-white px-6 py-2 rounded-full text-[12px] hover:opacity-90 transition">
               Join
             </button>
           </div>

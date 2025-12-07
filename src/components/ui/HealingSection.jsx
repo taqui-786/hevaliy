@@ -14,7 +14,7 @@ const nunito = Nunito_Sans({
 export default function HealingSection() {
   return (
     <section
-      className="w-full pb-10 md:px-16 px-8 mb-2
+      className="w-full pb-10 md:px-12 px-8 mb-2
     "
     >
       {/* HEADING */}

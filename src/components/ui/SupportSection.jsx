@@ -2,18 +2,25 @@ import Image from "next/image";
 import { Nunito_Sans } from "next/font/google";
 
 import centerImg from "../../../public/images/supportSectionimg.png"; // replace later
+import localFont from "next/font/local";
 
 const nunito = Nunito_Sans({
   weight: ["400", "600", "700"],
   subsets: ["latin"],
 });
 
+const switzer = localFont({
+  src: "../../../public/fonts/Switzer-Variable.woff2",
+  weight: "100 900",
+  style: "normal",
+  variable: "--font-switzer",
+});
 export default function SupportSection() {
   return (
-    <section className="w-full py-24 px-8 md:px-20  "
+    <section className="w-full py-24 px-8 lg:px-20 md:px-8 "
     >
       {/* MAIN HEADER */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-16 ">
         <h2
           className={`
             ${nunito.className}
@@ -27,7 +34,7 @@ export default function SupportSection() {
         <p
           className={`
             ${nunito.className}
-            text-[12.5px]  text-gray-600 font-semibold mt-1.5
+            md:text-[12.5px] text-sm  text-gray-600 font-semibold mt-1.5
           `}
         >
           Three ways we support your emotional wellbeing
@@ -35,9 +42,9 @@ export default function SupportSection() {
       </div>
 
       {/* GRID */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center px-18">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-12 md:gap-6 items-center lg:px-12">
         {/* LEFT COLUMN */}
-        <div className="flex flex-col gap-12">
+        <div className="md:flex flex-col gap-12 hidden">
           {/* 1 — Personal Progress Tracking */}
           <div className="flex-row gap-3 items-start">
             <svg
@@ -56,7 +63,7 @@ export default function SupportSection() {
               <h3
                 className={`
                   ${nunito.className}
-                  text-[23px] font-bold  
+                  lg:text-[23px] md:text-[19px] font-bold  
                 `}
               >
                 Personal Progress Tracking
@@ -65,7 +72,7 @@ export default function SupportSection() {
               <p
                 className={`
                   ${nunito.className}
-                  text-[16px]  text-gray-600 font-bold tracking-tighter leading-4 mt-1
+                  text-[16px] lg:font-bold  text-gray-600  tracking-tighter leading-4 mt-1
                 `}
               >
                 Monitor your emotional well-being with private journaling and
@@ -94,7 +101,7 @@ export default function SupportSection() {
               <h3
                 className={`
                   ${nunito.className}
-                  text-[23px] font-bold 
+                 lg:text-[23px] md:text-[19px] font-bold 
                 `}
               >
                 Guided Meditation & Audio
@@ -103,7 +110,7 @@ export default function SupportSection() {
               <p
                 className={`
                   ${nunito.className}
-              text-[16px]  text-gray-600 font-bold tracking-tighter leading-4 mt-1
+              text-[16px]  text-gray-600 lg:font-bold tracking-tighter leading-4 mt-1
                 `}
               >
                 Access a curated library of audio guides for mindfulness, stress
@@ -114,20 +121,59 @@ export default function SupportSection() {
         </div>
 
         {/* CENTER IMAGE */}
-        <div className="flex justify-center">
-          <div className="w-[260px] h-[400px] md:w-[400px] md:h-[540px] rounded-2xl overflow-hidden shadow-md">
-            <Image
-              src={centerImg}
-              alt="center"
-              width={467}
-              height={683}
-              className="object-cover w-full h-full"
-            />
-          </div>
-        </div>
+<div className="flex justify-center">
+  
+  {/* IMAGE BOX (MAIN CONTAINER) */}
+  <div className="relative w-[300px] h-[500px] lg:w-[400px] lg:h-[540px] md:w-[450px] rounded-2xl overflow-hidden shadow-md">
+    
+    {/* IMAGE */}
+    <Image
+      src={centerImg}
+      alt="center"
+      width={467}
+      height={683}
+      className="object-cover w-full h-full"
+  />
+
+    {/* 🟢 ALWAYS VISIBLE TOP TEXT */}
+<p className={`${switzer.className} absolute right-8 top-4 text-white -tracking-[.9px] font-bold leading-none flex items-end`}>
+  <span className="text-[40px]">4K <sup className="font-light -tracking-[160px]">+</sup></span>
+  <span className="text-[14px] text-white/70 font-medium">Users</span>
+</p>
+
+
+{/* 🔥 MOBILE ONLY FLOATING FEATURE TAGS */}
+<div className="absolute inset-0 md:hidden pointer-events-none flex flex-col gap-2">
+
+  <p className="absolute left-3 top-[67%] -translate-y-1/2 text-xs text-white font-semibold px-1.5 py-2 rounded-full 
+    backdrop-blur-lg bg-white/15 border-1 border-white/20  text-center whitespace-nowrap inline-block">
+    Personal Progress Tracking
+  </p>
+
+  <p className="absolute right-3 top-[72%] text-xs text-white font-semibold px-1.5 py-2 rounded-full 
+    backdrop-blur-lg bg-white/15 border border-white/20 text-center whitespace-nowrap inline-block">
+    Guided Meditation & Audio
+  </p>
+
+  <p className="absolute left-3 top-[80%] text-xs text-white font-semibold px-4 py-2 rounded-full 
+    backdrop-blur-lg bg-white/15 border border-white/20 text-center whitespace-nowrap inline-block">
+    Community Group Chat
+  </p>
+
+  <p className="absolute right-3 top-[88%] text-xs text-white font-semibold px-5 py-2 rounded-full 
+    backdrop-blur-lg bg-white/20 border border-white/20 text-center whitespace-nowrap inline-block">
+    Trained Peer Listeners
+  </p>
+
+</div>
+
+
+  </div>
+</div>
+
 
         {/* RIGHT COLUMN */}
-        <div className="flex flex-col gap-12">
+        <div className="md:flex flex-col gap-12 hidden">
           {/* 3 — Community Group Chat */}
           <div className="flex flex-col gap-3 items-end text-right justify-end ">
             <svg
@@ -146,7 +192,7 @@ export default function SupportSection() {
               <h3
                 className={`
                   ${nunito.className}
-                  text-[23px] font-bold  
+                  lg:text-[23px] md:text-[19px] font-bold  
                 `}
               >
                 Community Group Chat
@@ -155,7 +201,7 @@ export default function SupportSection() {
               <p
                 className={`
                   ${nunito.className}
-              vtext-[16px]  text-gray-600 font-bold tracking-tighter leading-4 mt-1
+              text-[16px]  text-gray-600 lg:font-bold tracking-tighter leading-4 mt-1
                 `}
               >
                 Find true connection in our specialized, moderated support
@@ -183,7 +229,7 @@ export default function SupportSection() {
               <h3
                 className={`
                   ${nunito.className}
-                  text-[23px] font-bold
+                  lg:text-[23px] md:text-[19px] font-bold
                 `}
               >
                 Trained Peer Listeners
@@ -192,7 +238,7 @@ export default function SupportSection() {
               <p
                 className={`
                   ${nunito.className}
-                text-[16px]  text-gray-600 font-bold tracking-tighter leading-4 mt-1
+                text-[16px]  text-gray-600 lg:font-bold tracking-tighter leading-4 mt-1
                 `}
               >
                 Connect one-on-one with a compassionate listener dedicated to
