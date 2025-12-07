@@ -77,7 +77,7 @@ export default function NavBar() {
             return (
               <div key={item.name} className="relative">
                 {isActive && (
-                  <span className="absolute -left-4 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-gray-600"></span>
+                  <span className="absolute lg:-left-4 md:-left-3 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-gray-600"></span>
                 )}
                 <Link
                   href={item.href}
