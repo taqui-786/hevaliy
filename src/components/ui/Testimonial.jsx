@@ -82,20 +82,21 @@ export default function TestimonialSection() {
 
   return (
     <section
-      className={`${switzer.className} w-full py-4 px-8 md:px-14 mb-22
+      className={`${switzer.className} w-full py-4  md:px-14 mb-22
           
 `}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         {/* LEFT STATIC SECTION  */}
-        <div className="flex flex-col justify-center pl-18">
+        <div className="flex flex-col justify-center md:pl-18 px-8">
           {/* ⬇️ Figma-perfect H2 */}
           <h2
             className={`
               ${switzer.className}
               font-semibold
-              text-[64px]
-              leading-[63.98px]
+              text-3xl
+              md:text-[64px]
+              md:leading-[63.98px]
               tracking-[0]
               text-[#2C7A59]
             `}
@@ -105,10 +106,10 @@ export default function TestimonialSection() {
           >
             What Are People{" "}
             <span className="text-gray-700">Saying About Us</span>
-          </h2>
+        </h2>
 
           <p
-            className={`text-[14px] text-gray-600 leading-[175%] mt-4 max-w-[360px]`}
+            className={`md:text-[14px] text-md text-gray-600 leading-[175%] mt-4 max-w-[360px]`}
           >
             We are very happy if you are satisfied with our service. Let’s read
             pure reviews from customers who bought our products.
@@ -125,7 +126,7 @@ export default function TestimonialSection() {
               </span>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 mt-8">
               <button
                 onClick={prevSlide}
                 className="w-10 h-10 rounded-lg bg-[#8F7A9C] text-white flex items-center justify-center shadow-md"
@@ -154,7 +155,7 @@ export default function TestimonialSection() {
         </div>
 
         {/* RIGHT SIDE — unchanged */}
-        <section className="w-full py-24 px-8 md:px-20 ">
+        <section className="w-full md:py-24 px-8 md:px-20 ">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
@@ -166,7 +167,7 @@ export default function TestimonialSection() {
             >
               {/* BIG CARD */}
               <div
-                className="p-6 rounded-2xl relative shadow-sm w-full h-full flex flex-col justify-between border border-gray-300"
+                className="p-6 rounded-2xl relative shadow-sm w-full h-full hidden  md:flex flex-col justify-between border border-gray-300"
                 style={{ backgroundColor: "#C3C3C34D" }}
               >
                 <button className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition">

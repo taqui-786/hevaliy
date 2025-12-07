@@ -22,10 +22,10 @@ export default function SubscribeSection() {
           src="/images/Lines_newsletter_bg.svg"
           alt="Background"
           fill
-          className="object-cover mix-blend-multiply object-top -translate-x-8 translate-y-8 md:translate-y-4"
+          className="object-contain mix-blend-multiply  "
         />
 
-        <div className="relative z-[2] text-center px-6 md:px-20 py-10 md:py-16">
+        <div className="relative z-[2] text-center px-6 md:px-20 py-6 md:py-16">
           
           {/* Small Heading */}
           <p className="text-gray-900 text-md tracking-wide font-medium mb-3">
@@ -33,26 +33,29 @@ export default function SubscribeSection() {
           </p>
 
           {/* Main Heading */}
-          <h2 className="text-2xl sm:text-3xl md:text-[40px] font-semibold text-[#625A60] leading-tight">
+          <h2 className="text-md md:text-[40px] font-semibold text-[#625A60] leading-tight">
             Subscribe to Find Calm, Hope, and <br className="hidden md:block" />
             Gentle Guidance from Heartivy
           </h2>
 
           {/* Subline */}
-          <p className="text-[#808080] text-sm max-w-2xl mx-auto mt-6 leading-relaxed px-2 md:px-32">
+          <p className="text-[#808080] text-xs md:text-sm text-justify  mx-auto md:mt-6 mt-8 md:leading-relaxed  px-32 md:px-0">
             Join our circle of care — receive comforting stories, mindful reflections, 
             and emotional wellness tips right in your inbox.
           </p>
 
           {/* Input + Button */}
-          <div className="mt-10 bg-white flex flex-col sm:flex-row items-center justify-between gap-3 mx-auto w-full max-w-xl px-2 py-1.5 rounded-full">
+          <div className="md:mt-10 mt-6 bg-white flex flex-row items-center justify-between gap-3 mx-auto w-full max-w-xl md:px-2 md:py-1.5 py-1 px-3 rounded-full">
             <input
               type="email"
               placeholder="Enter your email to begin your gentle journey"
               className="w-full sm:flex-1 px-4 py-2 rounded-full text-sm font-medium outline-none"
             />
-            <button className="bg-[#8F7A9C] text-white px-5 py-3.5 rounded-full text-[14px]  hover:opacity-90 transition">
+            <button className="bg-[#8F7A9C] hidden md:block text-white px-5 py-3.5 rounded-full text-[14px]  hover:opacity-90 transition">
               Join the Circle
+            </button>
+            <button className="bg-[#8F7A9C] md:hidden text-white px-8 py-2 rounded-full text-[12px]  hover:opacity-90 transition">
+              Join
             </button>
           </div>
         </div>

@@ -94,8 +94,8 @@ export default function NavBar() {
 
         {/* Login Button */}
         <Link href="/auth/login">
-          <div className="hidden md:flex items-center gap-2 bg-[#E8E8E8] px-6 py-2 rounded-full hover:bg-gray-100 transition cursor-pointer">
-            <span className="text-2\xl  font-bold">Login</span>
+          <div className="hidden md:flex items-center gap-2 bg-[#E8E8E8] px-5 py-2.5 rounded-full hover:bg-gray-100 transition cursor-pointer">
+            <span className="text-[23px]  font-bold">Login</span>
             <Image
               src={loginIcon}
               alt="login icon"
