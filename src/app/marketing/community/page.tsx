@@ -2,8 +2,15 @@
 'use client';
 import Header from '@/components/ui/NavBar';
 import Footer from '@/components/Footer';
-import { Heart, Brain, Leaf, Users, Sun, Mountain, Sparkles, Shield, Lock, User, Smile, Star, MessageCircle } from "lucide-react";
+import { Heart, Brain, Leaf, Users, Sun, Mountain, Sparkles, Shield, Lock, User, Smile, Star, MessageCircle, FileSearch, Search } from "lucide-react";
 import SubscribeSection from '@/components/ui/Subscription';
+import localFont from 'next/font/local';
+const switzer = localFont({
+  src: "../../../../public/fonts/Switzer-Variable.woff2",
+  weight: "100 900",
+  style: "normal",
+  variable: "--font-switzer",
+});
 // Dummy content for the cards and sections
 const communityCards = [
   {
@@ -13,7 +20,7 @@ const communityCards = [
     tags: ["Safe Space", "Anonymous", "Warm Community"],
     members: "1,247",
     icon: <Brain className="w-6 h-6 text-purple-500" />,
-    bg: "bg-purple-100",
+    bg: "bg-[#E8DFFF]",
   },
   {
     title: "Self-Growth Journey",
@@ -22,7 +29,7 @@ const communityCards = [
     tags: ["Supportive", "Growth", "Uplifting"],
     members: "892",
     icon: <Mountain className="w-6 h-6 text-green-600" />,
-    bg: "bg-green-100",
+    bg: "bg-[#CDEDE3]",
   },
   {
     title: "Healing After Heartbreak",
@@ -31,7 +38,7 @@ const communityCards = [
     tags: ["Compassionate", "Safe Space", "Healing"],
     members: "1,563",
     icon: <Heart className="w-6 h-6 text-red-500" />,
-    bg: "bg-pink-100",
+    bg: "bg-[#FBEAEC]",
   },
   {
     title: "Calm Corner (Mindfulness)",
@@ -40,7 +47,7 @@ const communityCards = [
     tags: ["Peaceful", "Mindful", "Grounding"],
     members: "2,104",
     icon: <Leaf className="w-6 h-6 text-green-700" />,
-    bg: "bg-teal-100",
+    bg: "bg-[#CDEDE3]",
   },
   {
     title: "Loneliness Support Group",
@@ -49,7 +56,7 @@ const communityCards = [
     tags: ["Empathy", "Connection", "Understanding"],
     members: "1,876",
     icon: <Users className="w-6 h-6 text-indigo-500" />,
-    bg: "bg-indigo-100",
+    bg: "bg-[#E8DFFF]",
   },
   {
     title: "Daily Motivation Circle",
@@ -58,7 +65,7 @@ const communityCards = [
     tags: ["Inspiring", "Uplifting", "Hopeful"],
     members: "3,201",
     icon: <Sun className="w-6 h-6 text-yellow-500" />,
-    bg: "bg-orange-100",
+    bg: "bg-[#FBEAEC]",
   },
 ];
 
@@ -96,7 +103,7 @@ const suggestedTopics = [
 
 const CommunityPage = () => {
   return (
-    <div className="font-sans text-gray-800 bg-white min-h-screen ">
+    <div style={{ fontFamily: "Arial" }} className="font-arial text-gray-800 bg-white min-h-screen  ">
 
       {/* 1. Header Component Import */}
       <Header />
@@ -104,54 +111,68 @@ const CommunityPage = () => {
       <main>
 
         {/* Hero / Banner Section */}
-        <section className="pt-52 mb-52 px-4 md:px-10 max-w-5xl mx-auto text-center ">
-          <h1 className="text-3xl md:text-4xl font-semibold mb-4 ">
+        <section className={`${switzer.className} pt-70 mb-35 px-4 md:px-10 max-w-5xl mx-auto text-center `}>
+          <h1 className="text-3xl   mb-4 ">
             Welcome to the Heartivy Community
           </h1>
-          <p className="text-gray-600 max-w-3xl mx-auto">
-            Join a safe space to share experiences, find guidance, and build meaningful connections with people who truly understand.
+          <p className="text-gray-600  mx-auto">
+A gentle space where you can share, connect, and grow with others who understand.
           </p>
           <div className="flex my-8 justify-center gap-5"><span>                <Heart className="w-7 h-7  text-green-300" /></span><span><Leaf className="w-7 h-7 text-green-300"></Leaf></span><span><Heart className="w-7 h-7 text-blue-300"></Heart></span></div>
         </section>
 
         {/* 🎨 REVISED: Search Bar Container Section (Soft, light background) */}
-        <section className="px-4 md:px-10 my-2 max-w-4xl mx-auto mb-18">
-          <div className="p-4 bg-white rounded-2xl shadow-inner-soft shadow-md border border-gray-100">
-            <div className="relative border border-gray-300 rounded-full">
+        <section className="px-4 my-2 max-w-3xl mx-auto mb-18">
+          {/* MAIN BOX WRAPPER (Shadow + Padding) */}
+          <div className=" bg-white rounded-3xl px-6 py-4 shadow-lg border border-gray-100">
+
+            {/* SEARCH INPUT */}
+            <div className="flex items-center gap-3 w-full border border-gray-200 bg-[#F4F5F7] rounded-full px-5 py-2.5">
+              <Search className="text-gray-400 " size={20} />
               <input
                 type="text"
-                placeholder="Search topics, groups, or members"
-                className="w-full py-2 pl-12 pr-4   rounded-full focus:ring-purple-500 focus:border-purple-500 shadow-sm bg-[#F1F1F3]"
+                placeholder="Search for topics, stories, or circles…"
+                className="bg-transparent w-full text-[11px] text-gray-600 outline-none placeholder:text-gray-500"
               />
-              <svg className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             </div>
-            <div className="flex  space-x-4 mt-5 text-sm text-gray-500">
-              <span className="cursor-pointer  text-gray-700 bg-[#F9FAFB] px-4 py-1 rounded-full hover:bg-gray-200">Popular</span>
-              <span className="cursor-pointer  text-gray-700 bg-[#F9FAFB] px-4 py-1 rounded-full hover:bg-gray-200">New</span>
-              <span className="cursor-pointer  text-gray-700 bg-[#F9FAFB] px-4 py-1 rounded-full hover:bg-gray-200">Therapist Picks</span>
-              <span className="cursor-pointer  text-gray-700 bg-[#F9FAFB] px-4 py-1 rounded-full hover:bg-gray-200">My Groups</span>
+
+            {/* TAGS ROW */}
+            <div className="flex flex-wrap gap-3 mt-5">
+              {["Anxiety", "Healing", "Relationships", "Self-Growth", "Stress Relief", "Motivation"].map(
+                (item, index) => (
+                  <span
+                    key={index}
+                    className="px-4 py-2 bg-[#F4F5F7] text-gray-600 text-[11px] rounded-full"
+                  >
+                    {item}
+                  </span>
+                )
+              )}
             </div>
+
           </div>
+
+
         </section>
 
         {/* 🎨 REVISED: Featured Groups/Topics Grid (Pastel Colors, Subtle Styling) */}
-        <section className="px-4 md:px-10 max-w-7xl mx-auto mb-52">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <section className="px-4 md:px-16 max-w-6xl mx-auto mb-52">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {communityCards.map((card, index) => (
               <div
                 key={index}
-                className={`w-full rounded-xl p-6 shadow-sm hover:shadow-md transition-all ${card.bg}`}
+                className={`w-full rounded-xl px-7 py-5 shadow-md hover:shadow-md transition-all ${card.bg}`}
               >
                 {/* Icon */}
                 <div className="mb-4 flex items-center gap-2">
-                  <div className="bg-white shadow-sm p-2 rounded-full">{card.icon}</div>
+                  <div className="bg-white shadow-sm p-3 rounded-full">{card.icon}</div>
                 </div>
 
                 {/* Title */}
-                <h2 className="text-lg font-semibold text-gray-900">{card.title}</h2>
+                <h2 className="text-[12px]   text-gray-900">{card.title}</h2>
 
                 {/* Description */}
-                <p className="text-gray-600 text-sm mt-2 leading-relaxed">
+                <p className="text-gray-600 text-xs mt-2 leading-relaxed">
                   {card.description}
                 </p>
 
@@ -160,7 +181,7 @@ const CommunityPage = () => {
                   {card.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1 text-gray-600"
+                      className="text-[9.5px] bg-white  rounded-full px-3 py-1 text-gray-600"
                     >
                       {tag}
                     </span>
@@ -168,10 +189,10 @@ const CommunityPage = () => {
                 </div>
 
                 {/* Footer */}
-                <div className="flex justify-between items-center mt-6">
-                  <span className="text-sm text-gray-500">{card.members} members</span>
+                <div className="flex justify-between items-center mt-4">
+                  <span className="text-[9.5px] text-gray-500">{card.members} members</span>
 
-                  <button className="px-4 py-2 text-sm font-medium bg-white border border-gray-300 rounded-full hover:bg-gray-100 transition">
+                  <button className="px-2 py-1 shadow-sm text-[12px] font-medium bg-white  rounded-full hover:bg-gray-100 transition">
                     Join Circle
                   </button>
                 </div>

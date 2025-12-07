@@ -78,8 +78,8 @@ export default function TestimonialSection() {
 
         {/* LEFT SIDE TEXT */}
         <div className="flex flex-col ">
-          <h2 className="font-semibold text-3xl md:text-5xl lg:text-[64px] text-[#2C7A59] leading-tight">
-            What Are People <span className="text-gray-700">Saying About Us</span>
+          <h2 className="font-semibold text-3xl md:text-5xl lg:text-[64px] text-[#575757] leading-tight">
+            What Are People Saying<span className="text-[#164D24]"> About Us</span>
           </h2>
 
           <p className="md:text-[14px] text-md text-gray-600 leading-[175%] mt-4 max-w-[360px]">
@@ -89,12 +89,12 @@ export default function TestimonialSection() {
 
           {/* PAGE + BUTTON */}
           <div className="flex flex-col gap-2 mt-12">
-            <div>
+            <div className="flex items-end gap-4">
               <span className="text-5xl font-bold text-gray-900">
-                {String(index + 1).padStart(2, "0")}
+                {String(index + 1).padStart(2, "0")}  
               </span>
               <span className="text-gray-500 text-md">
-                / {String(slides.length).padStart(2, "0")}
+                /   {String(slides.length).padStart(2, "0")}
               </span>
             </div>
 

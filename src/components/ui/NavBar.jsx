@@ -81,7 +81,7 @@ export default function NavBar() {
                 )}
                 <Link
                   href={item.href}
-                  className={`text-gray-700 lg:text-[24px]  md:text-[14px] font-medium hover:text-black transition ${
+                  className={`text-gray-700 lg:text-xl font-bold md:text-[14px]  hover:text-black transition ${
                     isActive ? "font-semibold" : ""
                   }`}
                 >

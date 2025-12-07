@@ -10,7 +10,7 @@ export default function Footer() {
         {/* Left Column: Brand & Social */}
         <div className="md:col-span-5 flex flex-col gap-3">
           <h3 className=" text-[14px] text-gray-900">Heartivy</h3>
-          <p className="text-gray-500 text-[13px] leading-relaxed max-w-xs">
+          <p className="text-gray-600 text-[13px] leading-relaxed max-w-xs">
             A safe, anonymous, and accessible mental health support platform for individuals struggling with loneliness, stress, and emotional challenges. <br/>
             You are not alone anymore.
           </p>
@@ -27,7 +27,7 @@ export default function Footer() {
           {/* Support Column */}
           <div>
             <h4 className="text-[14px] text-gray-900 mb-4">Support</h4>
-            <ul className="space-y-3 text-[13px] text-gray-500">
+            <ul className="space-y-3 text-[13px] text-gray-600">
               <li><Link href="#">Crisis Helpline</Link></li>
               <li><Link href="/chat">Chat Support</Link></li>
               <li><Link href="#">Find a Therapist</Link></li>
@@ -38,7 +38,7 @@ export default function Footer() {
           {/* Resources Column */}
           <div>
             <h4 className="text-[14px] text-gray-900 mb-4">Resources</h4>
-            <ul className="space-y-3 text-[13px] text-gray-500">
+            <ul className="space-y-3 text-[13px] text-gray-600">
               <li><Link href="#">Articles</Link></li>
               <li><Link href="#">Self-Help Tools</Link></li>
               <li><Link href="#">Blog</Link></li>
@@ -49,7 +49,7 @@ export default function Footer() {
           {/* Company Column */}
           <div>
             <h4 className="text-[14px] text-gray-900 mb-4">Company</h4>
-            <ul className="space-y-3 text-[13px] text-gray-500">
+            <ul className="space-y-3 text-[13px] text-gray-600">
               <li><Link href="/marketing/about">About</Link></li>
               <li><Link href="#">Our Mission</Link></li>
               <li><Link href="#">Team</Link></li>
@@ -60,7 +60,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Copyright */}
-      <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between text-[14px] text-gray-500">
+      <div className="max-w-7xl mx-auto px-6 pt-3 border-t border-gray-100 flex flex-col md:flex-row justify-between text-[13px] text-gray-600">
         <p>© 2025 Heartivy. All rights reserved.</p>
         <div className="flex gap-6 mt-4 md:mt-0">
           <Link href="#">Privacy Policy</Link>

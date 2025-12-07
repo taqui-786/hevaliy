@@ -30,19 +30,19 @@ export default function SubscribeSection() {
         <div className="relative z-[2] text-center px-6 md:px-20 py-8 md:py-16">
 
           {/* Small Heading */}
-          <p className="text-gray-900 text-md tracking-wide font-medium mb-2 md:mb-3">
+          <p className="text-[#164D24] text-md tracking-wide font-medium mb-2 md:mb-3">
             Our Journal of Healing
           </p>
 
           {/* Main Heading */}
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[40px] font-semibold text-[#625A60] leading-tight">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[40px] font-semibold text-[#585858] leading-tight">
             Subscribe to Find Calm, Hope, and{" "}
             <br className="hidden md:block" />
             Gentle Guidance from Heartivy
           </h2>
 
           {/* Subline */}
-          <p className="text-[#808080] text-xs sm:text-sm text-center sm:text-justify mx-auto md:mt-6 mt-4 md:leading-relaxed max-w-md">
+          <p className="text-[#585858] text-xs sm:text-sm text-center sm:text-justify mx-auto md:mt-6 mt-4 md:leading-relaxed max-w-md">
             Join our circle of care — receive comforting stories, mindful reflections,
             and emotional wellness tips right in your inbox.
           </p>

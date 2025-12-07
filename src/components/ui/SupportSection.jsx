@@ -1,9 +1,13 @@
 import Image from "next/image";
-import { Nunito_Sans } from "next/font/google";
+import { Nunito_Sans, Suravaram } from "next/font/google";
 
 import centerImg from "../../../public/images/supportSectionimg.png"; // replace later
 import localFont from "next/font/local";
 
+const suravaram = Suravaram({
+  weight: ["400", ], // required weights
+  subsets: ["latin"],            // required subsets
+});
 const nunito = Nunito_Sans({
   weight: ["400", "600", "700"],
   subsets: ["latin"],
@@ -17,7 +21,7 @@ const switzer = localFont({
 });
 export default function SupportSection() {
   return (
-    <section className="w-full py-24 px-8 lg:px-20 md:px-8 "
+    <section className="w-full py-24 px-8  md:px-10 "
     >
       {/* MAIN HEADER */}
       <div className="text-center mb-16 ">
@@ -44,7 +48,7 @@ export default function SupportSection() {
       {/* GRID */}
       <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-12 md:gap-6 items-center lg:px-12">
         {/* LEFT COLUMN */}
-        <div className="md:flex flex-col gap-12 hidden">
+        <div className="md:flex flex-col gap-18 hidden lg:px-6">
           {/* 1 — Personal Progress Tracking */}
           <div className="flex-row gap-3 items-start">
             <svg
@@ -136,9 +140,9 @@ export default function SupportSection() {
   />
 
     {/* 🟢 ALWAYS VISIBLE TOP TEXT */}
-<p className={`${switzer.className} absolute right-8 top-4 text-white -tracking-[.9px] font-bold leading-none flex items-end`}>
-  <span className="text-[40px]">4K <sup className="font-light -tracking-[160px]">+</sup></span>
-  <span className="text-[14px] text-white/70 font-medium">Users</span>
+<p className={`${switzer.className} absolute right-8 top-4 text-white -tracking-[.9px]  leading-none flex items-end`}>
+  <span className="text-[40px] -tracking-[3px]">4 <span className={`${suravaram.className}`}>K</span> <sup className="font-light -tracking-[160px]">+</sup></span>
+  <span className="text-[14px] text-[#8F7A9C] font-medium">Users</span>
 </p>
 
 
@@ -173,7 +177,7 @@ export default function SupportSection() {
 
 
         {/* RIGHT COLUMN */}
-        <div className="md:flex flex-col gap-12 hidden">
+        <div className="md:flex flex-col gap-18 hidden lg:px-6">
           {/* 3 — Community Group Chat */}
           <div className="flex flex-col gap-3 items-end text-right justify-end ">
             <svg
