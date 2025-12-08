@@ -118,7 +118,7 @@ const CommunityPage = () => {
           <p className="text-gray-600  mx-auto">
             A gentle space where you can share, connect, and grow with others who understand.
           </p>
-          <div className="flex my-8 justify-center gap-5"><span>                <Heart className="w-7 h-7  text-green-300" /></span><span><Leaf className="w-7 h-7 text-green-300"></Leaf></span><span><Heart className="w-7 h-7 text-blue-300"></Heart></span></div>
+          <div className="flex my-8 justify-center gap-5"><span>                <Heart className="w-5 h-5  text-green-300" /></span><span><Leaf className="w-5 h-5 text-green-300"></Leaf></span><span><Heart className="w-5 h-5 text-blue-300"></Heart></span></div>
         </section>
 
         {/* 🎨 REVISED: Search Bar Container Section (Soft, light background) */}
