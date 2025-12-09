@@ -73,19 +73,56 @@ export default function ChatArea() {
             {/* Message Input */}
             <div className="p-4  mt-38 bg-white"
             style={{fontFamily:"Arial"}}>
-                <div className="relative border-t-2 py-4 px-6 border-gray-100">
-       <div>             <textarea
-                        rows={2}
-                        placeholder="Type a message..."
-                        className="w-full bg-gray-100 rounded-lg p-2 text-sm resize-none focus:outline-none focus:ring-1 focus:ring-purple-300"
-                    />
-                    <button className="absolute right-3 bottom-3 bg-purple-600 hover:bg-purple-700 p-2 rounded-lg text-white transition">
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-                    </button></div>
-                    <p className="absolute left-4 bottom-1 text-xs text-red-500">
-                        <span className='line-through'>Type message and cast</span> <span className='font-bold'>curse</span>
-                    </p>
-                </div>
+       <div className="w-full">
+  {/* Input Wrapper */}
+  <div className="relative w-full flex items-center bg-[#F4F4F6] rounded-2xl px-4 py-3 border border-[#E5E5E8]">
+    
+    {/* LEFT ICON (📎 Attach) */}
+    <button className="mr-3 opacity-60 hover:opacity-100 transition">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A5A5E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21.44 11.05l-9.19 9.19a5 5 0 01-7.07-7.07l9.19-9.19a3 3 0 014.24 4.24L10.83 15.2a1 1 0 01-1.41-1.41l8.48-8.48" />
+      </svg>
+    </button>
+
+    {/* INPUT */}
+    <input
+      type="text"
+      placeholder="Type a message..."
+      className="w-full bg-transparent outline-none text-[14px] text-[#383838] placeholder:text-[#9B9B9F]"
+    />
+
+    {/* EMOJI ICON */}
+    <button className="mr-3 opacity-60 hover:opacity-100 transition">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5A5A5E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+        <line x1="9" y1="9" x2="9.01" y2="9"/>
+        <line x1="15" y1="9" x2="15.01" y2="9"/>
+      </svg>
+    </button>
+
+    {/* SEND BUTTON */}
+    <button className="bg-[#2F7BFF] p-2 rounded-xl hover:brightness-110 transition">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="22" y1="2" x2="11" y2="13"/>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+      </svg>
+    </button>
+  </div>
+
+  {/* Credits Line */}
+  <div className="flex items-center gap-2 mt-2">
+    <img
+      src="/icons/Coin.png"
+      alt="coin"
+      className="w-[14px] h-[14px]"
+    />
+    <p className="text-[12px] text-[#C46A3A]">
+      This message will cost <span className="font-semibold">10 credits</span>
+    </p>
+  </div>
+</div>
+
             </div>
         </div>
     );

@@ -1,5 +1,5 @@
 // import Image from 'next/image';
-import { Search, Plus, MessageSquare } from 'lucide-react';
+import { Search, Plus, MessageSquare, Edit, MoreHorizontal } from 'lucide-react';
 import { Nunito_Sans } from 'next/font/google';
 import Image from 'next/image';
 const nunito = Nunito_Sans({
@@ -62,8 +62,14 @@ export default function MessageList() {
         <h2 className="text-md"
           style={{ fontFamily: "Arial" }} >Messages</h2>
         <div className="flex items-center gap-3 text-gray-600">
-          <Search size={18} className="cursor-pointer" />
-          <Plus size={18} className="cursor-pointer" />
+         <div className="w-5 h-5 bg-[#EDEDED] rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-300 transition">
+    <Edit size={12} className="text-gray-600" />
+  </div>
+
+  {/* Three Dots Button */}
+  <div className="w-5 h-5 bg-[#EDEDED] rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-300 transition">
+    <MoreHorizontal size={12} className="text-gray-600" />
+  </div>
         </div>
       </div>
 
