@@ -61,14 +61,14 @@ export default function MessageList() {
       <div className="flex items-center justify-between mb-2 border-b-2 p-4 border-gray-100 ">
         <h2 className="text-md"
           style={{ fontFamily: "Arial" }} >Messages</h2>
-        <div className="flex items-center gap-3 text-gray-600">
+        <div className="flex items-center gap-3 text-gray-500">
          <div className="w-5 h-5 bg-[#EDEDED] rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-300 transition">
-    <Edit size={12} className="text-gray-600" />
+    <Edit size={12} className="text-gray-500" />
   </div>
 
   {/* Three Dots Button */}
   <div className="w-5 h-5 bg-[#EDEDED] rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-300 transition">
-    <MoreHorizontal size={12} className="text-gray-600" />
+    <MoreHorizontal size={16} className="text-gray-500" />
   </div>
         </div>
       </div>
