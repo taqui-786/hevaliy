@@ -79,10 +79,10 @@ export default function TestimonialSection() {
         {/* LEFT SIDE TEXT */}
         <div className="flex flex-col ">
           <h2 className="font-semibold text-3xl md:text-5xl lg:text-[64px] text-[#575757] leading-tight">
-            What Are People Saying<span className="text-[#164D24]"> About Us</span>
+            What Are People Saying<span className="text-[#575757]"> About Us</span>
           </h2>
 
-          <p className="md:text-[14px] text-md text-gray-600 leading-[175%] mt-4 max-w-[360px]">
+          <p className="md:text-[14px] text-md text-[#999999] leading-[175%] mt-4 max-w-[360px]">
             We are very happy if you are satisfied with our service. Let’s read
             pure reviews from customers who bought our products.
           </p>
@@ -137,7 +137,7 @@ export default function TestimonialSection() {
 
                 <MoreHorizontal className="absolute top-4 right-4 text-gray-400" size={24} />
                 <p className="text-4xl text-[#2C7A59] leading-none font-serif">“</p>
-                <p className="text-[14px] text-gray-700 leading-[175%] mt-2">
+                <p className="text-[14px] text-[#575757] leading-[175%] mt-2">
                   {slides[index].big.content}
                 </p>
 
@@ -160,7 +160,7 @@ export default function TestimonialSection() {
                   >
                     <MoreHorizontal className="absolute top-4 right-4 text-gray-400" size={24} />
                     <p className="text-4xl text-[#2C7A59] font-serif">“</p>
-                    <p className="text-[14px] text-gray-700 leading-[175%] mt-2">{card.content}</p>
+                    <p className="text-[14px] text-[#575757] leading-[175%] mt-2">{card.content}</p>
 
                     <div className="flex justify-end items-center gap-2 mt-4">
                       <Image src={card.img} width={28} height={28} alt="user" className="rounded-full"/>

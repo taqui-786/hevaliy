@@ -42,7 +42,7 @@ export default function SubscribeSection() {
           </h2>
 
           {/* Subline */}
-          <p className="text-[#585858] text-xs sm:text-sm text-center sm:text-justify mx-auto md:mt-6 mt-4 md:leading-relaxed max-w-md">
+          <p className="text-[#575757] text-xs sm:text-sm text-center sm:text-justify mx-auto md:mt-6 mt-4 md:leading-relaxed max-w-md">
             Join our circle of care — receive comforting stories, mindful reflections,
             and emotional wellness tips right in your inbox.
           </p>

@@ -25,7 +25,7 @@ export default function Hero() {
         <h1
           className="
           text-5xl lg:text-7xl md:text-4xl font-extrabold
-          text-[#F5D099]
+          text-[#D5B485]
           // drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)]
         "
         >
