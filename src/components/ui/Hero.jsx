@@ -16,7 +16,7 @@ const poppins = Poppins({
 
 export default function Hero() {
   return (
-    <section className={` ${nunito.className} relative w-full lg:h-[148vh]  sm:h-[134vh] md:h-[105vh] h-[134vh]  overflow-hidden`}>
+    <section className={` ${nunito.className} relative w-full lg:h-screen  sm:h-[134vh] md:h-[105vh] h-[134vh]  overflow-hidden`}>
       {/* Background Image */}
       <Image src={heroBg} alt="hero" fill className="object-cover" />
 
