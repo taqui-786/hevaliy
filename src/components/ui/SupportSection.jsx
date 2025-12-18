@@ -28,7 +28,7 @@ export default function SupportSection() {
         <h2
           className={`
             ${nunito.className}
-            text-[24px] md:text-[24px]
+            text-xl md:text-2xl lg:text-3xl
             font-bold 
           `}
         >
@@ -38,7 +38,7 @@ export default function SupportSection() {
         <p
           className={`
             ${nunito.className}
-            md:text-[12.5px] text-sm  text-gray-600 font-semibold mt-1.5
+            md:text-lg text-base  text-gray-600 font-semibold mt-1.5
           `}
         >
           Three ways we support your emotional wellbeing
@@ -76,7 +76,7 @@ export default function SupportSection() {
               <p
                 className={`
                   ${nunito.className}
-                  text-[16px] lg:font-bold  text-gray-600  tracking-tighter leading-4 mt-1
+                  md:text-lg text-base  font-medium  text-[#575757]  leading-6 mt-1
                 `}
               >
                 Monitor your emotional well-being with private journaling and
@@ -112,10 +112,11 @@ export default function SupportSection() {
               </h3>
 
               <p
-                className={`
+                 className={`
                   ${nunito.className}
-              text-[16px]  text-gray-600 lg:font-bold tracking-tighter leading-4 mt-1
+                  md:text-lg text-base  font-medium  text-[#575757]  leading-6 mt-1
                 `}
+              
               >
                 Access a curated library of audio guides for mindfulness, stress
                 relief, and better sleep — available anytime, anywhere.
@@ -139,11 +140,7 @@ export default function SupportSection() {
       className="object-cover w-full h-full"
   />
 
-    {/* 🟢 ALWAYS VISIBLE TOP TEXT */}
-<p className={`${switzer.className} absolute right-8 top-4 text-white -tracking-[.9px]  leading-none flex items-end`}>
-  <span className="text-[40px] -tracking-[3px]">4 <span className={`${suravaram.className}`}>K</span> <sup className="font-light -tracking-[160px]">+</sup></span>
-  <span className="text-[14px] text-[#8F7A9C] font-medium">Users</span>
-</p>
+
 
 
 {/* 🔥 MOBILE ONLY FLOATING FEATURE TAGS */}
@@ -203,10 +200,11 @@ export default function SupportSection() {
               </h3>
 
               <p
-                className={`
+                 className={`
                   ${nunito.className}
-              text-[16px]  text-gray-600 lg:font-bold tracking-tighter leading-4 mt-1
+                  md:text-lg text-base  font-medium  text-[#575757]  leading-6 mt-1
                 `}
+              
               >
                 Find true connection in our specialized, moderated support
                 rooms. Share experiences with others facing similar challenges.
@@ -242,7 +240,7 @@ export default function SupportSection() {
               <p
                 className={`
                   ${nunito.className}
-                text-[16px]  text-gray-600 lg:font-bold tracking-tighter leading-4 mt-1
+                  md:text-lg text-base  font-medium  text-[#575757]  leading-6 mt-1
                 `}
               >
                 Connect one-on-one with a compassionate listener dedicated to

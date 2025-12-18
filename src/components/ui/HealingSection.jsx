@@ -5,6 +5,7 @@ import img1 from "../../../public/images/Rectangle 41999.png";
 import img2 from "../../../public/images/Rectangle 42000.png";
 import img3 from "../../../public/images/Rectangle 42002.png";
 import img4 from "../../../public/images/Rectangle 42004.png";
+import { QuoteIcon } from "./Testimonial";
 
 const nunito = Nunito_Sans({
   weight: ["400", "600", "700"],
@@ -14,14 +15,14 @@ const nunito = Nunito_Sans({
 export default function HealingSection() {
   return (
     <section
-      className="w-full pb-10 md:px-12 px-8 mb-2
+      className="w-full pb-10 px-4 sm:px-6 md:px-8 md:pt-12 lg:px-24 mb-2
     "
     >
       {/* HEADING */}
       <h2
         className={`
           ${nunito.className}
-          text-center text-[24px] md:text-[20px]
+          text-center text-xl md:text-2xl lg:text-3xl
           font-extrabold  text-balck mb-28
         `}
       >
@@ -43,16 +44,26 @@ export default function HealingSection() {
 
         {/* ==== SMALL SCREEN TEXT (NOW LEFT) ==== */}
         <div
-          className={`${nunito.className} md:hidden font-bold flex justify-start items-center`}
+          className={`${nunito.className} md:hidden font-bold flex justify-center md:justify-start items-center`}
         >
-          <p className="text-[14px] leading-relaxed px-4 text-left">
-            <span className="text-[48px] text-[#8BA764] font-bold leading-none">
-              “
-            </span>
-            Every smile tells a story of courage — proof that healing isn’t
-            instant, but it’s real. Heartivy is where small steps lead to softer
-            days, lighter hearts, and genuine connection.
-          </p>
+          <div className="w-fit flex flex-col items-start justify-center">
+          <QuoteIcon className="text-2xl rotate-180 text-[#8BA764] " />
+            <p
+              className="
+  text-left
+  lg:text-2xl
+  md:text-base
+  leading-relaxed
+  max-w-xs
+  line-clamp-5
+  overflow-hidden
+"
+            >
+              Every smile tells a story of courage — proof that healing isn’t
+              instant, but it’s real. Heartivy is where small steps lead to
+              softer days, lighter hearts, and genuine connection.
+            </p>
+          </div>
         </div>
 
         {/* ==== SMALL SCREEN IMAGE 2 (END) ==== */}
@@ -67,7 +78,7 @@ export default function HealingSection() {
         </div>
 
         {/* ==== DESKTOP VIEW ==== */}
-        <div className="hidden md:flex col-span-2 gap-8 px-18">
+        <div className="hidden md:flex col-span-2 gap-8 px-0  lg:px-8 xl:px-18">
           {/* LEFT IMAGE */}
           <div className="w-full rounded-2xl overflow-hidden bg-gray-200 shadow-md">
             <Image
@@ -95,11 +106,22 @@ export default function HealingSection() {
         <div
           className={`${nunito.className} hidden md:flex justify-center items-center font-bold`}
         >
-          <p className="lg:text-[24px] md:text-[14px] font-bold">
-            Every smile tells a story of courage — proof that healing isn’t
-            instant, but it’s real. Heartivy is where small steps lead to softer
-            days, lighter hearts, and genuine connection.
-          </p>
+          <div className="max-w-sm">
+            <p
+              className="
+  text-left
+  lg:text-2xl
+  md:text-base
+  leading-relaxed
+  line-clamp-5
+  overflow-hidden
+"
+            >
+              Every smile tells a story of courage — proof that healing isn’t
+              instant, but it’s real. Heartivy is where small steps lead to
+              softer days, lighter hearts, and genuine connection.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -117,18 +139,28 @@ export default function HealingSection() {
         </div>
 
         {/* ==== SMALL SCREEN TEXT (LEFT ALIGNED) ==== */}
-        <div
-          className={`${nunito.className} md:hidden text-left font-bold flex items-center`}
+           <div
+          className={`${nunito.className} md:hidden font-bold flex justify-center md:justify-start items-center`}
         >
-          <p className="px-4 text-[14px] leading-relaxed">
-            <span className="text-[48px] text-[#8BA764] font-bold leading-none">
-              “
-            </span>
-            Every sunrise feels like a quiet victory — proof that even after the
-            darkest nights, light always returns. Heartivy is where healing
-            grows slowly, where strength is found in softness, and where hope
-            learns to breathe again.
-          </p>
+          <div className="w-fit flex flex-col items-start justify-center">
+            <QuoteIcon className="text-2xl rotate-180 text-[#8BA764] " />
+            <p
+              className="
+  text-left
+  lg:text-2xl
+  md:text-base
+  leading-relaxed
+  line-clamp-5
+  overflow-hidden
+  max-w-xs
+"
+            >
+              Every sunrise feels like a quiet victory — proof that even after
+              the darkest nights, light always returns. Heartivy is where
+              healing grows slowly, where strength is found in softness, and
+              where hope learns to breathe again.
+            </p>
+          </div>
         </div>
 
         {/* ==== SMALL SCREEN SECOND IMAGE (RIGHT) ==== */}
@@ -146,19 +178,19 @@ export default function HealingSection() {
         <div
           className={`${nunito.className} hidden md:flex text-[12px] font-bold items-center   justify-center`}
         >
-          <p>
-            <span className="text-[64px] text-[#8BA764] font-bold leading-none">
-              “
-            </span>
-            <span className="lg:text-[24px] md:text-[14px] font-bold">
-              Every sunrise feels like a quiet victory — proof that even after
-              the darkest nights, light always returns., and where hope learns
-              to breathe again.
-            </span>
-          </p>
+          <div className="flex flex-col items-start">
+            <QuoteIcon className="text-2xl rotate-180 text-[#8BA764] " />
+            <p>
+              <span className="lg:text-2xl md:text-base font-bold">
+                Every sunrise feels like a quiet victory — proof that even after
+                the darkest nights, light always returns., and where hope learns
+                to breathe again.
+              </span>
+            </p>
+          </div>
         </div>
 
-        <div className="hidden md:flex col-span-2 gap-8 pl-18">
+        <div className="hidden md:flex col-span-2 gap-8  pl-0  lg:pl-8 xl:pl-18">
           {/* MIDDLE IMAGE */}
           <div className="w-full rounded-2xl overflow-hidden bg-gray-200 shadow-md">
             <Image

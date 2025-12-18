@@ -16,51 +16,63 @@ const poppins = Poppins({
 
 export default function Hero() {
   return (
-    <section className={` ${nunito.className} relative w-full lg:h-screen  sm:h-[134vh] md:h-[105vh] h-[134vh]  overflow-hidden`}>
+    <section
+      className={` ${nunito.className} relative w-full h-dvh   overflow-hidden`}
+    >
       {/* Background Image */}
-      <Image src={heroBg} alt="hero" fill className="object-cover" />
+      <Image
+        src={heroBg}
+        alt="hero"
+        fill
+        priority
+        quality={100}
+        className="object-cover saturate-[1.2] contrast-[1.1] brightness-[1.05]"
+      />
 
       {/* Main Center Content */}
-      <div className="absolute md:inset-0 top-147 left-0   flex flex-col md:items-center md:justify-center md:text-center  px-6">
+      <div className="absolute md:inset-0  top-147 left-0   flex flex-col md:items-center md:justify-center md:text-center  px-6">
         <h1
           className="
-          text-5xl lg:text-7xl md:text-4xl font-extrabold
+          text-5xl lg:text-8xl md:text-6xl font-extrabold
           text-[#D5B485]
-          // drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)]
+          drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)]
         "
         >
           Every Heart Deserves <br /> Care and Understanding
         </h1>
 
-        <p className="text-gray-200 mt-3 max-w-2xl  text-sm  md:text-[13px] leading-relaxed">
-      Find a safe, judgment-free space to share, heal, and rediscover emotional balance with people who truly listen.
+        <p className="text-gray-200 mt-3 max-w-full  text-sm  md:text-base leading-relaxed">
+          Find a safe, judgment-free space to share, heal, and rediscover
+          emotional balance with people who truly listen.
         </p>
       </div>
 
       {/* Bottom Left Card */}
       <div
         className="
-        absolute lg:bottom-10 lg:left-24 hidden md:bottom-8 md:left-10  md:flex flex-col text-white max-w-xs
+        absolute lg:bottom-10 lg:left-24 hidden md:bottom-8 md:left-10  md:flex flex-col text-white max-w-md
         
         
       "
       >
-                <div className="flex  md:justify-start items-center gap-2 mb-2">
-                  <Cog className="w-4 h-4 md:w-7 md:h-7" />
-                  <h3 className="text-sm lg:text-xl md:text-lg  font-semibold">Strength in Stillness</h3>
-                </div>
+        <div className="flex  md:justify-start items-center gap-2 mb-2">
+          <Cog className="w-4 h-4 md:w-6 md:h-6" />
+          <h3 className="text-sm lg:text-xl md:text-lg  font-semibold">
+            Strength in Stillness
+          </h3>
+        </div>
 
-                <p className="text-xs lg:text-sm md:text-[14px] text-[#D5B485] leading-relaxed">
-                  Mental well-being shapes how we think, feel, and connect with others.
-                  When you take time to care for your mind, you nurture your confidence,
-                  balance, and resilience — one gentle moment at a time.
-                </p>
+        <p className="text-xs lg:text-base md:text-sm text-[#D5B485] font-medium leading-relaxed  ">
+          Mental well-being shapes how we think, feel, and connect with others.
+          When you take time to care for your mind, you nurture your confidence,
+          balance, and resilience — one gentle moment at a time.
+        </p>
       </div>
 
       {/* Bottom Right Circular Card */}
-      <div className="absolute hidden  bottom-10 right-24 lg:flex text-[#D5B485]  items-center gap-[10px">
+      <div className="absolute hidden  bottom-10 right-24 lg:flex text-[#D5B485]  items-center ">
         {/* Text on the LEFT side */}
-        <div className="flex flex-col text-right leading-tight">
+        <div className="flex flex-col text-right leading-tight gap-1">
           <span className="text-sm opacity-90">Growth</span>
           <span className="text-sm opacity-90">Balance</span>
           <span className="text-sm opacity-90">Awareness</span>
