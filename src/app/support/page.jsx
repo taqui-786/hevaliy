@@ -30,7 +30,7 @@ function FeatureCard({ src, title, description }) {
       </div>
 
       <h4 className="font-medium  text-[13px] mb-1">{title}</h4>
-      <p className="text-[12px] leading-3 font-light text-gray-500 ">{description}</p>
+      <p className="text-[12px] leading-3 font-light text-neutral-500 ">{description}</p>
     </div>
   );
 }
@@ -138,7 +138,7 @@ export default function SupportPage() {
 
           {/* --- 2. Feature Cards --- */}
           <div
-            className={`${switzer.className} grid grid-cols-1 md:grid-cols-3 gap-8 mb-52 max-w-5xl mx-auto`}
+            className={`${switzer.className} grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-52 max-w-5xl mx-auto`}
           >
             <FeatureCard
               src="/icons/consumer-protection_11668189 1.svg"

@@ -14,7 +14,7 @@ const poppins = Poppins({
 export default function SubscribeSection() {
   return (
     <section
-      className={`px-4 md:px-10 max-w-5xl mx-auto mb-40 ${poppins.className}`}
+      className={`px-4 md:px-10 max-w-5xl mx-auto md:mb-40 mb-20 ${poppins.className}`}
     >
       {/* Card */}
       <div className="relative max-w-6xl w-full rounded-4xl bg-[#EDEDED] overflow-hidden">

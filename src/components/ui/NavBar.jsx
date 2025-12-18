@@ -102,12 +102,13 @@ export default function NavBar() {
             </div>
 
             {navItems.map((item) => (
-              <p
+              <Link
+                href={item.href}
                 key={item.name}
-                className="text-white font-extrabold text-[36px]"
+                className="text-white font-extrabold text-[36px] block"
               >
                 {item.name}
-              </p>
+              </Link>
             ))}
 
             <Link href="/auth/login" className="flex text-black">
@@ -154,11 +155,11 @@ export default function NavBar() {
               return (
                 <div key={item.name} className="relative">
                   {isActive && (
-                    <span className="absolute lg:-left-6 md:-left-4 top-1/2 -translate-y-1/2 lg:w-2 lg:h-2 md:w-1.5 md:h-1.5 rounded-full bg-gray-600"></span>
+                    <span className="absolute lg:-left-5 md:-left-4 top-1/2 -translate-y-1/2 lg:w-2 lg:h-2 md:w-1.5 md:h-1.5 rounded-full bg-gray-600"></span>
                   )}
                   <Link
                     href={item.href}
-                    className={`text-neutral-700 lg:text-xl font-bold md:text-[14px] hover:text-black transition `}
+                    className={`text-neutral-700 lg:text-base font-bold md:text-sm hover:text-black transition `}
                   >
                     {item.name}
                   </Link>
@@ -169,7 +170,7 @@ export default function NavBar() {
 
           {/* Login Button */}
           <Link href="/auth/login">
-            <div className="hidden md:flex items-center lg:gap-4 md:gap-2 bg-[#E8E8E8] lg:px-8 md:px-5 lg:py-4 md:py-2 rounded-full hover:bg-gray-100 transition cursor-pointer">
+            <div className="hidden md:flex items-center md:gap-2 bg-[#E8E8E8] md:px-4  md:py-2 rounded-full hover:bg-gray-100 transition cursor-pointer">
               <span className="lg:text-xl md:text-[14px] font-bold">Login</span>
               <Image
                 src={loginIcon}

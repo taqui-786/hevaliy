@@ -33,7 +33,7 @@ export default function Hero() {
       <div className="absolute md:inset-0  top-147 left-0   flex flex-col md:items-center md:justify-center md:text-center  px-6">
         <h1
           className="
-          text-5xl lg:text-8xl md:text-6xl font-extrabold
+          text-5xl lg:text-7xl md:text-6xl font-extrabold
           text-[#D5B485]
           drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)]
         "
@@ -41,7 +41,7 @@ export default function Hero() {
           Every Heart Deserves <br /> Care and Understanding
         </h1>
 
-        <p className="text-gray-200 mt-3 max-w-full  text-sm  md:text-base leading-relaxed">
+        <p className="text-gray-200 mt-3 max-w-full  text-sm  md:text-sm leading-relaxed">
           Find a safe, judgment-free space to share, heal, and rediscover
           emotional balance with people who truly listen.
         </p>

@@ -73,13 +73,13 @@ export default function TestimonialSection() {
 
   return (
     <section
-      className={`${switzer.className} w-full py-10 px-6 md:px-12 lg:px-20 mb-32`}
+      className={`${switzer.className} w-full py-10 px-6 md:px-12 lg:px-20 md:mb-32 mb-20`}
     >
       {/* GRID FIXED FOR MD AND UP */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 lg:px-12">
         {/* LEFT SIDE TEXT */}
         <div className="flex flex-col ">
-          <h2 className="font-semibold text-3xl md:text-5xl lg:text-[64px] text-[#575757] leading-tight">
+          <h2 className="font-semibold text-4xl md:text-5xl lg:text-[64px] text-[#575757] leading-tight">
             What Are People <br /> Saying
             <span className="text-[#164D24]"> About Us</span>
           </h2>
