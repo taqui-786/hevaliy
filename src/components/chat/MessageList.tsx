@@ -1,17 +1,37 @@
-'use client';
+"use client";
 
-import { Search, Plus, MessageSquare, Edit, MoreHorizontal } from 'lucide-react';
-import { Nunito_Sans } from 'next/font/google';
-import Image from 'next/image';
-import { useChatContext } from './ChatContext';
+import {
+  Search,
+  Plus,
+  MessageSquare,
+  Edit,
+  MoreHorizontal,
+} from "lucide-react";
+import { Nunito_Sans } from "next/font/google";
+import Image from "next/image";
+import { useChatContext } from "./ChatContext";
 
 const nunito = Nunito_Sans({
   weight: ["400", "600", "700"],
   subsets: ["latin"],
 });
 
-const ChatListItem = ({ name, lastMessage, time, avatarSrc, isOnline, unreadCount }: { name: string; lastMessage: string; time: string; isOnline: boolean; unreadCount: number; avatarSrc: string }) => {
-  const { selectedUser, setSelectedUser } = useChatContext();
+const ChatListItem = ({
+  name,
+  lastMessage,
+  time,
+  avatarSrc,
+  isOnline,
+  unreadCount,
+}: {
+  name: string;
+  lastMessage: string;
+  time: string;
+  isOnline: boolean;
+  unreadCount: number;
+  avatarSrc: string;
+}) => {
+  const { selectedUser, setSelectedUser, setShowMobileChat } = useChatContext();
   const isSelected = selectedUser?.name === name;
 
   const handleUserClick = () => {
@@ -24,20 +44,29 @@ const ChatListItem = ({ name, lastMessage, time, avatarSrc, isOnline, unreadCoun
       unreadCount,
     };
     setSelectedUser(userData);
+    setShowMobileChat(true);
   };
 
   return (
     <div
       onClick={handleUserClick}
       className={`flex items-center gap-1 p-1.5 cursor-pointer rounded-full transition ${
-        isSelected ? 'bg-[#F2F2F2]' : 'hover:bg-[#F2F2F2]'
+        isSelected ? "bg-[#F2F2F2]" : "hover:bg-[#F2F2F2]"
       }`}
     >
       <div className="relative">
         <div className="w-8 h-8 bg-gray-300 rounded-full overflow-hidden">
-          <Image src={avatarSrc} alt={name} width={40} height={40} className="object-cover" />
+          <Image
+            src={avatarSrc}
+            alt={name}
+            width={40}
+            height={40}
+            className="object-cover"
+          />
         </div>
-        {isOnline && <div className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-white"></div>}
+        {isOnline && (
+          <div className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-white"></div>
+        )}
       </div>
 
       <div className="flex justify-between w-full items-center min-w-0">
@@ -57,15 +86,50 @@ const ChatListItem = ({ name, lastMessage, time, avatarSrc, isOnline, unreadCoun
 
 export default function MessageList() {
   const users = [
-    { name: "Ananya Sharma", lastMessage: "Keep believing in yourself; every small....", time: "Online", isOnline: true, unreadCount: 3, avatarSrc: '/images/Ellipse 143 (1).png' },
-    { name: "Siya Iyer", lastMessage: "Wishing you strength and clarity...", time: "10:33 AM", isOnline: false, unreadCount: 1, avatarSrc: '/images/Ellipse 143.png' },
-    { name: "Meera Nambiar", lastMessage: "Take a deep breath, move forward", time: "10:33 AM", isOnline: false, unreadCount: 2, avatarSrc: '/images/Ellipse 143 (4).png' },
-    { name: "Kunal Rathore", lastMessage: "Great things await you; stay focused", time: "10:33 AM", isOnline: false, unreadCount: 0, avatarSrc: '/images/Ellipse 143 (2).png' },
-    { name: "Twesha Thakur", lastMessage: "Thank you for sharing your story...", time: "10:33 AM", isOnline: false, unreadCount: 0, avatarSrc: '/images/Ellipse 143 (3).png' },
+    {
+      name: "Ananya Sharma",
+      lastMessage: "Keep believing in yourself; every small....",
+      time: "Online",
+      isOnline: true,
+      unreadCount: 3,
+      avatarSrc: "/images/Ellipse 143 (1).png",
+    },
+    {
+      name: "Siya Iyer",
+      lastMessage: "Wishing you strength and clarity...",
+      time: "10:33 AM",
+      isOnline: false,
+      unreadCount: 1,
+      avatarSrc: "/images/Ellipse 143.png",
+    },
+    {
+      name: "Meera Nambiar",
+      lastMessage: "Take a deep breath, move forward",
+      time: "10:33 AM",
+      isOnline: false,
+      unreadCount: 2,
+      avatarSrc: "/images/Ellipse 143 (4).png",
+    },
+    {
+      name: "Kunal Rathore",
+      lastMessage: "Great things await you; stay focused",
+      time: "10:33 AM",
+      isOnline: false,
+      unreadCount: 0,
+      avatarSrc: "/images/Ellipse 143 (2).png",
+    },
+    {
+      name: "Twesha Thakur",
+      lastMessage: "Thank you for sharing your story...",
+      time: "10:33 AM",
+      isOnline: false,
+      unreadCount: 0,
+      avatarSrc: "/images/Ellipse 143 (3).png",
+    },
   ];
 
   return (
-    <div className="w-70 bg-white border-r-2 border-gray-100 h-full">
+    <div className=" w-full sm:w-70 bg-white sm:border-r-2 border-gray-100 h-full">
       <div className="flex items-center justify-between mb-2 border-b-2 p-4 border-gray-100">
         <h2 className="text-md" style={{ fontFamily: "Arial" }}>
           Messages

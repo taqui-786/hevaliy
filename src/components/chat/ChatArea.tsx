@@ -1,28 +1,49 @@
-'use client';
+"use client";
 
-import { MoreVertical, Phone, Video, X } from 'lucide-react';
-import { Nunito_Sans } from 'next/font/google';
-import Image from 'next/image';
-import { useState, useRef, useEffect } from 'react';
-import { useChatContext } from './ChatContext';
+import { MoreVertical, Phone, Video, ArrowLeft } from "lucide-react";
+import { Nunito_Sans } from "next/font/google";
+import Image from "next/image";
+import { useState, useRef, useEffect } from "react";
+import { useChatContext } from "./ChatContext";
 
 const nunito = Nunito_Sans({
   weight: ["400", "600", "700"],
   subsets: ["latin"],
 });
 
-const ChatBubble = ({ message, time, isSender, senderName }: { message: string; time: string; isSender: boolean; senderName: string; status?: string }) => (
-  <div className={`flex ${isSender ? 'justify-end' : 'justify-start'} mb-3`}>
+const ChatBubble = ({
+  message,
+  time,
+  isSender,
+  senderName,
+}: {
+  message: string;
+  time: string;
+  isSender: boolean;
+  senderName: string;
+  status?: string;
+}) => (
+  <div className={`flex ${isSender ? "justify-end" : "justify-start"} mb-3`}>
     <div>
-      {!isSender ? <p className="text-left text-[10px] text-gray-500 px-4 mb-1">{senderName}</p> : ""}
+      {!isSender ? (
+        <p className="text-left text-[10px] text-gray-500 px-4 mb-1">
+          {senderName}
+        </p>
+      ) : (
+        ""
+      )}
       <div
         className={`max-w-xs p-3 rounded-xl ${
-          isSender ? 'bg-[#155DFC] text-white' : 'border border-gray-200 text-gray-900'
+          isSender
+            ? "bg-[#155DFC] text-white"
+            : "border border-gray-200 text-gray-900"
         }`}
       >
         <p className="text-xs break-words">{message}</p>
       </div>
-      <div className={`text-[10px] mt-1 px-4 text-gray-500 flex items-center justify-start gap-1`}>
+      <div
+        className={`text-[10px] mt-1 px-4 text-gray-500 flex items-center justify-start gap-1`}
+      >
         {time}
       </div>
     </div>
@@ -30,12 +51,22 @@ const ChatBubble = ({ message, time, isSender, senderName }: { message: string; 
 );
 
 export default function ChatArea() {
-  const { messages, addMessage, selectedUser, showInfoPanel, setShowInfoPanel, setMessages, chatHistories, setChatHistory } = useChatContext();
-  const [inputValue, setInputValue] = useState('');
+  const {
+    messages,
+    addMessage,
+    selectedUser,
+    showInfoPanel,
+    setShowInfoPanel,
+    setMessages,
+    chatHistories,
+    setChatHistory,
+    setShowMobileChat,
+  } = useChatContext();
+  const [inputValue, setInputValue] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -51,19 +82,19 @@ export default function ChatArea() {
       } else {
         const defaultMessages = [
           {
-            id: '1',
+            id: "1",
             sender: selectedUser.name,
             message: "Hi! How are you feeling today?",
             time: "10:33 AM",
             isSender: false,
           },
           {
-            id: '2',
-            sender: 'You',
+            id: "2",
+            sender: "You",
             message: "I'm doing well, thanks for asking!",
             time: "10:34 AM",
             isSender: true,
-            status: 'sent',
+            status: "sent",
           },
         ];
         setMessages(defaultMessages);
@@ -73,41 +104,47 @@ export default function ChatArea() {
   }, [selectedUser?.name]);
 
   const handleSendMessage = () => {
-    if (inputValue.trim() === '') return;
+    if (inputValue.trim() === "") return;
 
     const userMessage = {
       id: Date.now().toString(),
-      sender: 'You',
+      sender: "You",
       message: inputValue,
-      time: new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }),
+      time: new Date().toLocaleTimeString("en-US", {
+        hour: "2-digit",
+        minute: "2-digit",
+      }),
       isSender: true,
-      status: 'sent',
+      status: "sent",
     };
 
     // Add user message
     const updatedMessages = [...messages, userMessage];
     setMessages(updatedMessages);
-    
+
     // Update chat history
     if (selectedUser) {
       setChatHistory(selectedUser.name, updatedMessages);
     }
 
-    setInputValue('');
+    setInputValue("");
 
     // Auto-reply simulation
     setTimeout(() => {
       const replyMessage = {
         id: (Date.now() + 1000).toString(),
-        sender: selectedUser?.name || 'Therapist',
+        sender: selectedUser?.name || "Therapist",
         message: "Thank you for sharing. I'm here to help you through this.",
-        time: new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }),
+        time: new Date().toLocaleTimeString("en-US", {
+          hour: "2-digit",
+          minute: "2-digit",
+        }),
         isSender: false,
       };
-      
+
       const finalMessages = [...updatedMessages, replyMessage];
       setMessages(finalMessages);
-      
+
       // Update chat history with reply
       if (selectedUser) {
         setChatHistory(selectedUser.name, finalMessages);
@@ -129,38 +166,56 @@ export default function ChatArea() {
       <div
         className={`${nunito.className} flex items-center justify-between p-2 border-b-2 border-gray-100 bg-white shrink-0`}
       >
-        <div
-          className="flex items-center gap-1 cursor-pointer"
-          onClick={handleProfileClick}
-        >
-          <div className="w-10 h-10 bg-gray-300 rounded-full relative">
-            <Image
-              src={selectedUser?.avatarSrc || '/images/Ellipse 143 (1).png'}
-              alt="image"
-              className="object-contain"
-              fill
-            />
-            {selectedUser?.isOnline && (
-              <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
-            )}
-          </div>
-          <div>
-            <p className="font-bold text-gray-900 leading-4">{selectedUser?.name || 'Select a chat'}</p>
-            <p className="text-[12px] font-semibold text-gray-400">
-              {selectedUser?.isOnline ? 'Online' : 'Offline'}
-            </p>
+        <div className="flex items-center gap-1">
+          {/* Back Button for Mobile */}
+          <button
+            onClick={() => setShowMobileChat(false)}
+            className="md:hidden p-2 text-gray-600 hover:bg-gray-100 rounded-full mr-1"
+          >
+            <ArrowLeft size={20} />
+          </button>
+
+          <div
+            className="flex items-center gap-1 cursor-pointer"
+            onClick={handleProfileClick}
+          >
+            <div className="w-10 h-10 bg-gray-300 rounded-full relative">
+              <Image
+                src={selectedUser?.avatarSrc || "/images/Ellipse 143 (1).png"}
+                alt="image"
+                className="object-contain"
+                fill
+              />
+              {selectedUser?.isOnline && (
+                <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
+              )}
+            </div>
+            <div>
+              <p className="font-bold text-gray-900 leading-4">
+                {selectedUser?.name || "Select a chat"}
+              </p>
+              <p className="text-[12px] font-semibold text-gray-400">
+                {selectedUser?.isOnline ? "Online" : "Offline"}
+              </p>
+            </div>
           </div>
         </div>
 
         <div className="flex items-center gap-6 text-gray">
           <Phone size={12} className="cursor-pointer hover:text-gray-800" />
           <Video size={12} className="cursor-pointer hover:text-gray-800" />
-          <MoreVertical size={12} className="cursor-pointer hover:text-gray-800" />
+          <MoreVertical
+            size={12}
+            className="cursor-pointer hover:text-gray-800"
+          />
         </div>
       </div>
 
       {/* Chat Messages Area - Flexible Height with Scroll */}
-      <div className="flex-1 overflow-y-auto p-5" style={{ fontFamily: "Arial" }}>
+      <div
+        className="flex-1 overflow-y-auto p-5"
+        style={{ fontFamily: "Arial" }}
+      >
         {messages && messages.length > 0 ? (
           messages.map((msg, index) => (
             <ChatBubble
@@ -180,7 +235,10 @@ export default function ChatArea() {
       </div>
 
       {/* Message Input - Fixed Height */}
-      <div className="shrink-0 bg-white p-4 border-t-2 border-gray-100" style={{ fontFamily: "Arial" }}>
+      <div
+        className="shrink-0 bg-white p-4 border-t-2 border-gray-100"
+        style={{ fontFamily: "Arial" }}
+      >
         <div className="w-full px-4">
           {/* Input Wrapper */}
           <div className="relative w-full flex items-end gap-2">
@@ -207,7 +265,7 @@ export default function ChatArea() {
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               onKeyPress={(e) => {
-                if (e.key === 'Enter') {
+                if (e.key === "Enter") {
                   handleSendMessage();
                 }
               }}
@@ -257,17 +315,24 @@ export default function ChatArea() {
 
         {/* Credits Line */}
         <div className="flex w-full max-w-[170px] gap-2 p-2">
-          <Image src="/icons/Coin.svg" alt="coin" width={12} height={12} className="w-[14px] h-[14px]" />
+          <Image
+            src="/icons/Coin.svg"
+            alt="coin"
+            width={12}
+            height={12}
+            className="w-[14px] h-[14px]"
+          />
           <p className="text-[12px] text-[#C46A3A]">
-            This message will cost <span className="font-semibold">10 credits</span>
+            This message will cost{" "}
+            <span className="font-semibold">10 credits</span>
           </p>
         </div>
       </div>
 
       {/* Info Panel Overlay for Mobile */}
-      {showInfoPanel && (
+      {/* {showInfoPanel && (
         <div className="fixed inset-0 bg-black/30 z-40 lg:hidden" onClick={handleCloseInfoPanel} />
-      )}
+      )} */}
     </div>
   );
 }

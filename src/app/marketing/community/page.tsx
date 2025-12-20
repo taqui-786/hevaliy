@@ -1,11 +1,26 @@
 // components/CommunityPage.jsx (Revised for design accuracy)
-'use client';
-import { useState } from 'react';
-import Header from '@/components/ui/NavBar';
-import Footer from '@/components/Footer';
-import { Heart, Leaf, Users, Sun, Sparkles, Shield, User, Smile, Star, MessageCircle, FileSearch, Search, CloudRain, TrendingUp } from "lucide-react";
-import SubscribeSection from '@/components/ui/Subscription';
-import localFont from 'next/font/local';
+"use client";
+import { useState } from "react";
+import Header from "@/components/ui/NavBar";
+import Footer from "@/components/Footer";
+import {
+  Heart,
+  Leaf,
+  Users,
+  Sun,
+  Sparkles,
+  Shield,
+  User,
+  Smile,
+  Star,
+  MessageCircle,
+  FileSearch,
+  Search,
+  CloudRain,
+  TrendingUp,
+} from "lucide-react";
+import SubscribeSection from "@/components/ui/Subscription";
+import localFont from "next/font/local";
 
 const switzer = localFont({
   src: "../../../../public/fonts/Switzer-Variable.woff2",
@@ -112,33 +127,43 @@ const CommunityPage = () => {
   const [searchText, setSearchText] = useState("");
   const [selectedTag, setSelectedTag] = useState(null);
 
-  const tagsList = ["Anxiety", "Healing", "Relationships", "Self-Growth", "Stress Relief", "Motivation"];
+  const tagsList = [
+    "Anxiety",
+    "Healing",
+    "Relationships",
+    "Self-Growth",
+    "Stress Relief",
+    "Motivation",
+  ];
 
   // Filter logic
   const filteredCards = communityCards.filter((card) => {
-    const matchesSearch = card.title.toLowerCase().includes(searchText.toLowerCase()) ||
+    const matchesSearch =
+      card.title.toLowerCase().includes(searchText.toLowerCase()) ||
       card.description.toLowerCase().includes(searchText.toLowerCase());
-    
+
     const matchesTag = selectedTag ? card.category === selectedTag : true;
 
     return matchesSearch && matchesTag;
   });
 
   return (
-    <div style={{ fontFamily: "Arial" }} className="font-arial text-gray-800 bg-white min-h-screen">
-
+    <div
+      style={{ fontFamily: "Arial" }}
+      className="font-arial text-gray-800 bg-white min-h-screen"
+    >
       {/* 1. Header Component Import */}
       <Header />
 
       <main>
-
         {/* Hero / Banner Section */}
-        <section className={`${switzer.className} pt-70 mb-35 px-4 md:px-10 max-w-5xl mx-auto text-center`}>
-          <h1 className="text-3xl mb-4">
-            Welcome to the Heartivy Community
-          </h1>
+        <section
+          className={`${switzer.className} pt-70 mb-35 px-4 md:px-10 max-w-5xl mx-auto text-center`}
+        >
+          <h1 className="text-3xl mb-4">Welcome to the Heartivy Community</h1>
           <p className="text-gray-600 mx-auto">
-            A gentle space where you can share, connect, and grow with others who understand.
+            A gentle space where you can share, connect, and grow with others
+            who understand.
           </p>
           <div className="flex my-8 justify-center gap-5">
             <span>
@@ -155,18 +180,19 @@ const CommunityPage = () => {
 
         {/* Search Bar Container Section */}
         <section className="px-4 my-2 max-w-3xl mx-auto mb-18">
-          <div className="bg-white rounded-3xl px-6 py-4 shadow-lg border border-gray-100">
-
+          <div className="bg-transparent md:bg-white md:rounded-3xl md:px-6 md:py-4 md:shadow-lg md:border md:border-gray-100">
             {/* SEARCH INPUT */}
-            <div className="flex items-center gap-3 w-full border border-gray-200 bg-[#F4F5F7] rounded-full px-5 py-2.5">
-              <Search className="text-gray-400" size={20} />
-              <input
-                type="text"
-                placeholder="Search for topics, stories, or circles…"
-                value={searchText}
-                onChange={(e) => setSearchText(e.target.value)}
-                className="bg-transparent w-full text-[11px] text-gray-600 outline-none placeholder:text-gray-500"
-              />
+            <div className="bg-white rounded-3xl px-6 py-4 shadow-lg border border-gray-100 md:border-none md:shadow-none md:bg-transparent md:rounded-none md:px-0 md:py-0">
+              <div className="flex items-center gap-3 w-full border border-gray-200 bg-[#F4F5F7] rounded-full px-5 py-2.5">
+                <Search className="text-gray-400" size={20} />
+                <input
+                  type="text"
+                  placeholder="Search for topics, stories, or circles…"
+                  value={searchText}
+                  onChange={(e) => setSearchText(e.target.value)}
+                  className="bg-transparent w-full text-[11px] text-gray-600 outline-none placeholder:text-gray-500"
+                />
+              </div>
             </div>
 
             {/* TAGS ROW */}
@@ -174,7 +200,9 @@ const CommunityPage = () => {
               {tagsList.map((item, index) => (
                 <button
                   key={index}
-                  onClick={() => setSelectedTag(selectedTag === item ? null : item)}
+                  onClick={() =>
+                    setSelectedTag(selectedTag === item ? null : item)
+                  }
                   className={`px-4 py-2 text-[11px] rounded-full transition ${
                     selectedTag === item
                       ? "bg-purple-600 text-white"
@@ -185,7 +213,6 @@ const CommunityPage = () => {
                 </button>
               ))}
             </div>
-
           </div>
         </section>
 
@@ -199,7 +226,9 @@ const CommunityPage = () => {
               >
                 {/* Icon */}
                 <div className="mb-4 flex items-center gap-2">
-                  <div className="bg-white shadow-sm p-2.5 rounded-full">{card.icon}</div>
+                  <div className="bg-white shadow-sm p-2.5 rounded-full">
+                    {card.icon}
+                  </div>
                 </div>
 
                 {/* Title */}
@@ -224,7 +253,9 @@ const CommunityPage = () => {
 
                 {/* Footer */}
                 <div className="flex justify-between items-center mt-4">
-                  <span className="text-[9.5px] text-gray-500">{card.members} <br /> members</span>
+                  <span className="text-[9.5px] text-gray-500">
+                    {card.members} <br /> members
+                  </span>
 
                   <button className="px-2 py-1 shadow-sm text-[12px] font-medium bg-white rounded-full hover:bg-gray-100 transition">
                     Join Circle
@@ -235,7 +266,9 @@ const CommunityPage = () => {
           </div>
           {filteredCards.length === 0 && (
             <div className="text-center py-10">
-              <p className="text-gray-500 text-sm">No communities found. Try a different search or tag.</p>
+              <p className="text-gray-500 text-sm">
+                No communities found. Try a different search or tag.
+              </p>
             </div>
           )}
         </section>
@@ -273,11 +306,13 @@ const CommunityPage = () => {
                   {/* Likes + Support */}
                   <div className="flex items-center gap-4 text-[11px] text-gray-500 mt-auto">
                     <span className="flex items-center gap-1">
-                      <Heart className="w-4 h-4 text-red-500 fill-red-500" /> {story.likes}
+                      <Heart className="w-4 h-4 text-red-500 fill-red-500" />{" "}
+                      {story.likes}
                     </span>
 
                     <span className="flex items-center gap-1">
-                      <Sparkles className="w-4 h-4 text-yellow-500 fill-yellow-500" /> {story.support}
+                      <Sparkles className="w-4 h-4 text-yellow-500 fill-yellow-500" />{" "}
+                      {story.support}
                     </span>
                   </div>
                 </div>
@@ -288,11 +323,10 @@ const CommunityPage = () => {
 
         <div className="w-full py-8 px-6 flex flex-col items-center">
           {/* Title */}
-          <h2 className="text-md text-gray-800">
-            Celebrate Kindness
-          </h2>
+          <h2 className="text-md text-gray-800">Celebrate Kindness</h2>
           <p className="text-gray-500 mt-2 text-sm text-center">
-            We appreciate every act of kindness that makes this community feel like home.
+            We appreciate every act of kindness that makes this community feel
+            like home.
           </p>
 
           <div className="flex flex-wrap gap-5 justify-center mt-10">
@@ -310,7 +344,9 @@ const CommunityPage = () => {
               <div className="w-16 h-14 rounded-full bg-[#DBEAFE] flex items-center justify-center shadow-md">
                 <MessageCircle className="w-7 h-7 text-[#155DFC]" />
               </div>
-              <p className="mt-2 mb-3 text-gray-800 text-[13px]">Empathy Giver</p>
+              <p className="mt-2 mb-3 text-gray-800 text-[13px]">
+                Empathy Giver
+              </p>
               <p className="text-gray-500 text-[11px]">Always listening</p>
             </div>
 
@@ -319,7 +355,9 @@ const CommunityPage = () => {
               <div className="w-16 h-14 rounded-full bg-[#FEF3C6] flex items-center justify-center shadow-md">
                 <Sun className="w-7 h-7 text-[#E17101]" />
               </div>
-              <p className="mt-2 mb-3 text-gray-800 text-[13px]">Daily Supporter</p>
+              <p className="mt-2 mb-3 text-gray-800 text-[13px]">
+                Daily Supporter
+              </p>
               <p className="text-gray-500 text-[11px]">Here every day</p>
             </div>
 
@@ -328,7 +366,9 @@ const CommunityPage = () => {
               <div className="w-16 h-14 rounded-full bg-[#DCFCE7] flex items-center justify-center shadow-md">
                 <Leaf className="w-7 h-7 text-[#00A63E]" />
               </div>
-              <p className="mt-2 mb-3 text-gray-800 text-[13px]">Calm Bringer</p>
+              <p className="mt-2 mb-3 text-gray-800 text-[13px]">
+                Calm Bringer
+              </p>
               <p className="text-gray-500 text-[11px]">Spreads peace</p>
             </div>
 
@@ -337,7 +377,9 @@ const CommunityPage = () => {
               <div className="w-16 h-14 rounded-full bg-[#F3E8FF] flex items-center justify-center shadow-md">
                 <Star className="w-7 h-7 text-purple-500" />
               </div>
-              <p className="mt-2 mb-3 text-gray-800 text-[13px]">Light Bearer</p>
+              <p className="mt-2 mb-3 text-gray-800 text-[13px]">
+                Light Bearer
+              </p>
               <p className="text-gray-500 text-[11px]">Brings hope</p>
             </div>
           </div>
@@ -347,7 +389,9 @@ const CommunityPage = () => {
         <section className="px-4 max-w-3xl mx-auto mb-48 flex justify-center">
           <div className="mt-14 bg-[#F4EFFF] pt-8 px-8 pb-4 rounded-2xl shadow-md w-full max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-1.5 bg-white rounded-full"><Shield className="text-purple-600 w-5" /></div>
+              <div className="p-1.5 bg-white rounded-full">
+                <Shield className="text-purple-600 w-5" />
+              </div>
               <p className="text-[13px] text-gray-800">
                 Community Safety & Emotional Guidelines
               </p>
@@ -382,7 +426,6 @@ const CommunityPage = () => {
         </section>
 
         <SubscribeSection />
-
       </main>
 
       {/* 2. Footer Component Import */}

@@ -47,7 +47,7 @@ export default function HealingSection() {
           className={`${nunito.className} md:hidden font-bold flex justify-center md:justify-start items-center`}
         >
           <div className="w-fit flex flex-col items-start justify-center">
-          <QuoteIcon className="text-2xl rotate-180 text-[#8BA764] " />
+            <QuoteIcon className="text-2xl rotate-180 text-[#8BA764] " />
             <p
               className="
   text-left
@@ -139,10 +139,10 @@ export default function HealingSection() {
         </div>
 
         {/* ==== SMALL SCREEN TEXT (LEFT ALIGNED) ==== */}
-           <div
+        <div
           className={`${nunito.className} md:hidden font-bold flex justify-center md:justify-start items-center`}
         >
-          <div className="w-fit flex flex-col items-start justify-center">
+          <div className="w-fit flex flex-col items-start justify-center mb-2 ">
             <QuoteIcon className="text-2xl rotate-180 text-[#8BA764] " />
             <p
               className="
@@ -176,10 +176,10 @@ export default function HealingSection() {
 
         {/* ==== DESKTOP VIEW ==== */}
         <div
-          className={`${nunito.className} hidden md:flex text-[12px] font-bold items-center   justify-center`}
+          className={`${nunito.className} hidden md:flex text-[12px] font-bold items-center   justify-center `}
         >
           <div className="flex flex-col items-start">
-            <QuoteIcon className="text-2xl rotate-180 text-[#8BA764] " />
+            <QuoteIcon className="text-2xl rotate-180 text-[#8BA764] mb-4" />
             <p>
               <span className="lg:text-2xl md:text-base font-bold">
                 Every sunrise feels like a quiet victory — proof that even after

@@ -22,21 +22,21 @@ const slides = [
   {
     big: {
       content:
-        "I finally felt safe enough to talk about things I’ve kept hidden for years...",
+        "I finally felt safe enough to talk about things I've kept hidden for years. The anonymity is absolute, and that freedom allowed me to be truly honest for the first time. It changed everything.",
       img: user1,
       name: "Ruth M.I.",
       loc: "USA",
     },
     small1: {
       content:
-        "Knowing I can connect with a compassionate listener 24/7 is a massive weight off my shoulders.",
+        "Knowing I can connect with a compassionate listener 24/7 is a massive weight off my shoulders. I didn't feel alone anymore.",
       img: user2,
       name: "Alex R.",
       loc: "Canada",
     },
     small2: {
       content:
-        "The groups are incredible. I found people who truly ‘get it’...",
+        "The groups are incredible. I found people who truly 'get it' in a supportive, judgment-free community.",
       img: user3,
       name: "Yaretzi H.",
       loc: "UK",
@@ -139,7 +139,7 @@ export default function TestimonialSection() {
                   size={24}
                 />
                 <QuoteIcon className="text-2xl rotate-180 text-[#2C7A59] " />
-                <p className="text-[14px] text-[#575757] leading-[175%] mt-2">
+                <p className="text-base text-[#575757] leading-[175%] mt-2">
                   {slides[index].big.content}
                 </p>
 
@@ -152,8 +152,8 @@ export default function TestimonialSection() {
                     className="rounded-full"
                   />
                   <div>
-                    <p className="text-[12px]">{slides[index].big.name}</p>
-                    <p className="text-[10px] text-gray-500">
+                    <p className="text-xs">{slides[index].big.name}</p>
+                    <p className="text-xs text-gray-500">
                       {slides[index].big.loc}
                     </p>
                   </div>
@@ -173,7 +173,7 @@ export default function TestimonialSection() {
                       size={24}
                     />
                    <QuoteIcon className="text-2xl rotate-180 text-[#2C7A59]" />
-                    <p className="text-[14px] text-[#575757] leading-[175%] mt-2">
+                    <p className="text-base text-[#575757] leading-[175%] mt-2">
                       {card.content}
                     </p>
 
@@ -186,8 +186,8 @@ export default function TestimonialSection() {
                         className="rounded-full"
                       />
                       <div>
-                        <p className="text-[12px]">{card.name}</p>
-                        <p className="text-[10px] text-gray-500">{card.loc}</p>
+                        <p className="text-xs">{card.name}</p>
+                        <p className="text-xs text-gray-500">{card.loc}</p>
                       </div>
                     </div>
                   </div>

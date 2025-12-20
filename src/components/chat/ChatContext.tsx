@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from "react";
 
 interface Message {
   id: string;
@@ -33,6 +33,10 @@ interface ChatContextType {
   setShowInfoPanel: (show: boolean) => void;
   chatHistories: { [key: string]: Message[] };
   setChatHistory: (userName: string, messages: Message[]) => void;
+  showMobileChat: boolean;
+  setShowMobileChat: (show: boolean) => void;
+  showMobileSidebar: boolean;
+  setShowMobileSidebar: (show: boolean) => void;
 }
 
 const ChatContext = createContext<ChatContextType | undefined>(undefined);
@@ -44,29 +48,30 @@ export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
     time: "Online",
     isOnline: true,
     unreadCount: 3,
-    avatarSrc: '/images/Ellipse 143 (1).png',
+    avatarSrc: "/images/Ellipse 143 (1).png",
   };
 
   const defaultMessages: Message[] = [
     {
-      id: '1',
-      sender: 'Ananya Sharma',
+      id: "1",
+      sender: "Ananya Sharma",
       message: "Hi! How are you feeling today?",
       time: "10:33 AM",
       isSender: false,
     },
     {
-      id: '2',
-      sender: 'You',
+      id: "2",
+      sender: "You",
       message: "Work has been tiring and anxious today.",
       time: "10:33 AM",
       isSender: true,
-      status: 'sent',
+      status: "sent",
     },
     {
-      id: '3',
-      sender: 'Ananya Sharma',
-      message: "I'm here to listen. Tell me, what's been making work anxious today?",
+      id: "3",
+      sender: "Ananya Sharma",
+      message:
+        "I'm here to listen. Tell me, what's been making work anxious today?",
       time: "10:33 AM",
       isSender: false,
     },
@@ -74,18 +79,22 @@ export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
 
   const [selectedUser, setSelectedUser] = useState<User>(defaultUser);
   const [messages, setMessages] = useState<Message[]>(defaultMessages);
-  const [activeNavLink, setActiveNavLink] = useState('/general-chats');
-  const [showInfoPanel, setShowInfoPanel] = useState(true);
+  const [activeNavLink, setActiveNavLink] = useState("/general-chats");
+  const [showInfoPanel, setShowInfoPanel] = useState(false);
+  const [showMobileChat, setShowMobileChat] = useState(false);
+  const [showMobileSidebar, setShowMobileSidebar] = useState(false);
 
   // Store chat history for each user
-  const [chatHistories, setChatHistoriesState] = useState<{ [key: string]: Message[] }>({
-    'Ananya Sharma': defaultMessages,
+  const [chatHistories, setChatHistoriesState] = useState<{
+    [key: string]: Message[];
+  }>({
+    "Ananya Sharma": defaultMessages,
   });
 
   const addMessage = (message: Message) => {
     const updatedMessages = [...messages, message];
     setMessages(updatedMessages);
-    
+
     // Update chat history for selected user
     if (selectedUser) {
       setChatHistoriesState({
@@ -116,6 +125,10 @@ export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
         setShowInfoPanel,
         chatHistories,
         setChatHistory,
+        showMobileChat,
+        setShowMobileChat,
+        showMobileSidebar,
+        setShowMobileSidebar,
       }}
     >
       {children}
@@ -126,7 +139,7 @@ export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
 export const useChatContext = () => {
   const context = useContext(ChatContext);
   if (!context) {
-    throw new Error('useChatContext must be used within ChatProvider');
+    throw new Error("useChatContext must be used within ChatProvider");
   }
   return context;
 };
