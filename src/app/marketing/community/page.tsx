@@ -125,7 +125,7 @@ const suggestedTopics = [
 
 const CommunityPage = () => {
   const [searchText, setSearchText] = useState("");
-  const [selectedTag, setSelectedTag] = useState(null);
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
   const tagsList = [
     "Anxiety",
