@@ -150,15 +150,17 @@ export default function HealingSection() {
   lg:text-2xl
   md:text-base
   leading-relaxed
-  line-clamp-5
+  line-clamp-6
   overflow-hidden
   max-w-xs
 "
             >
               Every sunrise feels like a quiet victory — proof that even after
-              the darkest nights, light always returns. Heartivy is where
-              healing grows slowly, where strength is found in softness, and
-              where hope learns to breathe again.
+              the darkest nights, light always returns.
+              <p className="">
+                Heartivy is where healing grows slowly, where strength is found
+                in softness, and where hope learns to breathe again.
+              </p>
             </p>
           </div>
         </div>
@@ -183,8 +185,11 @@ export default function HealingSection() {
             <p>
               <span className="lg:text-2xl md:text-base font-bold">
                 Every sunrise feels like a quiet victory — proof that even after
-                the darkest nights, light always returns., and where hope learns
-                to breathe again.
+                the darkest nights, light always returns.
+                <p className="">
+                  Heartivy is where healing grows slowly, where strength is
+                  found in softness, and where hope learns to breathe again.
+                </p>
               </span>
             </p>
           </div>
