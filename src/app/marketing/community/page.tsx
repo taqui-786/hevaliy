@@ -217,7 +217,7 @@ const CommunityPage = () => {
         </section>
 
         {/* Featured Groups/Topics Grid */}
-        <section className="px-4 md:px-12 max-w-6xl mx-auto mb-40">
+        <section className="px-4 md:px-12 max-w-6xl mx-auto mb-0 md:mb-40">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {filteredCards.map((card, index) => (
               <div
@@ -275,14 +275,14 @@ const CommunityPage = () => {
 
         {/* You Might Be Looking For - Card List */}
         <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
-          <div className="w-full py-12 px-26 bg-[#FCF9FE]">
+          <div className="w-full py-12 px-0 md:px-26 bg-[#FCF9FE]">
             {/* Section Title */}
             <h2 className="text-center text-md text-gray-800 mb-10">
               Most Uplifting Stories This Week
             </h2>
 
             {/* Cards Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-full sm:max-w-6xl mx-auto">
               {suggestedTopics.map((story, index) => (
                 <div
                   key={index}
@@ -321,7 +321,7 @@ const CommunityPage = () => {
           </div>
         </section>
 
-        <div className="w-full py-8 px-6 flex flex-col items-center">
+        <div className="w-full py-4 sm:py-8 px-6 flex flex-col items-center">
           {/* Title */}
           <h2 className="text-md text-gray-800">Celebrate Kindness</h2>
           <p className="text-gray-500 mt-2 text-sm text-center">
@@ -386,7 +386,7 @@ const CommunityPage = () => {
         </div>
 
         {/* Community Pillars / Why Join? */}
-        <section className="px-4 max-w-3xl mx-auto mb-48 flex justify-center">
+        <section className="px-4 max-w-3xl mx-auto mb-8 md:mb-48 flex justify-center">
           <div className="mt-14 bg-[#F4EFFF] pt-8 px-8 pb-4 rounded-2xl shadow-md w-full max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-1.5 bg-white rounded-full">

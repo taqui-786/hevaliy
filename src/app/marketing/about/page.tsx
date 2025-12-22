@@ -112,7 +112,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="flex justify-center items-center mb-12 md:mb-52">
+        <div className="sm:flex justify-center items-center mb-12 md:mb-52 hidden ">
           <span className="bg-gray-400 w-32 md:w-45 h-1.5 rounded-full opacity-50"></span>
         </div>
 

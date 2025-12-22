@@ -243,7 +243,7 @@ export default function ChatArea() {
           {/* Input Wrapper */}
           <div className="relative w-full flex items-end gap-2">
             {/* LEFT ICON (Attach) */}
-            <button className="hover:opacity-100 transition flex-shrink-0">
+            <button className="hover:opacity-100 transition shrink-0">
               <svg
                 width="15"
                 height="15"
@@ -273,7 +273,7 @@ export default function ChatArea() {
             />
 
             {/* EMOJI ICON */}
-            <button className="hover:opacity-100 transition flex-shrink-0">
+            <button className="hover:opacity-100 transition shrink-0">
               <svg
                 width="15"
                 height="15"
@@ -294,7 +294,7 @@ export default function ChatArea() {
             {/* SEND BUTTON */}
             <button
               onClick={handleSendMessage}
-              className="bg-[#155DFC] p-2 rounded-xl hover:brightness-110 transition flex-shrink-0"
+              className="bg-[#155DFC] p-2 rounded-xl hover:brightness-110 transition shrink-0"
             >
               <svg
                 width="16"

@@ -216,7 +216,7 @@ function DashboardContent() {
 
             {/* Info Panel */}
             {showInfoPanel && (
-              <div className="hidden lg:block w-80 shrink-0 transition-all duration-300">
+              <div className="hidden md:block w-80 shrink-0 transition-all duration-300">
                 <InfoPanel />
               </div>
             )}
@@ -224,7 +224,7 @@ function DashboardContent() {
             {/* Mobile Info Panel Drawer */}
             {showInfoPanel && (
               <div
-                className="fixed inset-0 z-50 lg:hidden flex justify-end"
+                className="fixed inset-0 z-50 md:hidden flex justify-end"
                 style={{ fontFamily: "Arial" }}
               >
                 {/* Backdrop */}
@@ -234,7 +234,7 @@ function DashboardContent() {
                 />
 
                 {/* Panel Content - Right Side Drawer */}
-                <div className="relative bg-white w-[280px] h-full shadow-2xl flex flex-col z-50 overflow-hidden">
+                <div className="relative bg-white w-full md:w-[280px] h-full shadow-2xl flex flex-col z-50 overflow-hidden">
                   {/* Close Button at Top Right */}
                   <button
                     onClick={() => setShowInfoPanel(false)}

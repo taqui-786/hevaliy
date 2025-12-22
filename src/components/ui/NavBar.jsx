@@ -184,7 +184,7 @@ export default function NavBar() {
 
           {/* Mobile Toggle */}
           <button className="md:hidden ml-4" onClick={() => setOpen(!open)}>
-            <span className="text-xl text-white">☰</span>
+            <span className="text-xl text-black">☰</span>
           </button>
         </div>
       </nav>
