@@ -86,39 +86,39 @@ export default function Sidebar({
 
         <nav className={`space-y-1 ${nunito.className}`}>
           <NavLink
-            href="/dashboard"
+            href="/chat"
             icon={Home}
             text="Dashboard"
             forceText={forceText}
           />
           <NavLink
-            href="/general-chats"
+            href="/chat"
             icon={Users}
             text="General Chats"
             badge={4}
             forceText={forceText}
           />
           <NavLink
-            href="/private-chats"
+            href="/chat"
             icon={MessageCircle}
             text="Private Chats"
             badge={3}
             forceText={forceText}
           />
           <NavLink
-            href="/community-feed"
+            href="/chat"
             icon={FileText}
             text="Community Feed"
             forceText={forceText}
           />
           <NavLink
-            href="/sessions"
+            href="/chat"
             icon={Calendar}
             text="Sessions"
             forceText={forceText}
           />
           <NavLink
-            href="/notification"
+            href="/chat"
             icon={Bell}
             text="Notifications"
             forceText={forceText}
