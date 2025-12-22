@@ -61,6 +61,7 @@ export default function NavBar() {
     }
     return () => (document.body.style.overflow = "auto");
   }, [open]);
+console.log(pathname);
 
   return (
     <div className="relative">
@@ -168,24 +169,46 @@ export default function NavBar() {
             })}
           </div>
 
-          {/* Login Button */}
-          <Link href="/auth/login">
-            <div className="hidden md:flex items-center md:gap-2 bg-[#E8E8E8] md:px-4  md:py-2 rounded-full hover:bg-gray-100 transition cursor-pointer">
-              <span className="lg:text-xl md:text-[14px] font-bold">Login</span>
-              <Image
-                src={loginIcon}
-                alt="login icon"
-                width={18}
-                height={18}
-                className="object-contain"
-              />
-            </div>
-          </Link>
-
-          {/* Mobile Toggle */}
-          <button className="md:hidden ml-4" onClick={() => setOpen(!open)}>
-            <span className="text-xl text-black">☰</span>
-          </button>
+          {pathname === "/" || pathname === "/marketing/about"  ? (
+              <>
+            
+              <Link href="/auth/login">
+                <div className="hidden md:flex items-center md:gap-2 bg-[#E8E8E8] md:px-4  md:py-2 rounded-full hover:bg-gray-100 transition cursor-pointer">
+                  <span className="lg:text-xl md:text-[14px] font-bold">
+                    Login
+                  </span>
+                  <Image
+                    src={loginIcon}
+                    alt="login icon"
+                    width={18}
+                    height={18}
+                    className="object-contain"
+                  />
+                </div>
+              </Link>
+              {/* Mobile Toggle */}
+              <button className="md:hidden ml-4" onClick={() => setOpen(!open)}>
+                <span className="text-2xl text-black">☰</span>
+              </button>
+            </>
+       
+          ) : (
+                 <Link href="/auth/login">
+              <div className="flex items-center gap-2 bg-[#E8E8E8] px-4 py-2 rounded-full hover:bg-gray-100 transition cursor-pointer">
+                <span className="lg:text-xl md:text-[14px] font-bold">
+                  Login
+                </span>
+                <Image
+                  src={loginIcon}
+                  alt="login icon"
+                  width={18}
+                  height={18}
+                  className="object-contain"
+                />
+              </div>
+            </Link>
+          
+          )}
         </div>
       </nav>
     </div>

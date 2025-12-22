@@ -14,13 +14,13 @@ export default function LoginSignup() {
     return (
         <>  
         <Navbar />  
-        <div className="min-h-screen bg-white">
+        <div className="min-h-dvh  bg-white">
 
 
             {/* Main Content */}
-            <div className="pt-24 pb-20 bg-linear-to-br from-purple-50 to-white min-h-screen">
+            <div className=" pt-8 md:pt-20 pb-0 bg-linear-to-br from-purple-50 to-white h-full">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-22">
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div className="grid md:grid-cols-2 gap-12 lg:gap-24 items-center">
                         {/* Left Side - Form */}
                         <div>
 
@@ -28,10 +28,10 @@ export default function LoginSignup() {
 
                             <div>
                                 <h2 className="text-4xl font-bold text-gray-900 mb-2">Welcome</h2>
-                                <p className="text-gray-600 mb-8">A safe and gentle space where every journey matters.</p>
+                                <p className="text-gray-600 mb-8 my-4">A safe and gentle space where every journey matters.</p>
 
-                                <div className="space-y-4">
-                                    <div className="grid grid-cols-2 gap-4">
+                                <div className="space-y-4 max-w-full md:max-w-96 mt-10">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         <div>
                                             <label className="block text-sm font-semibold text-gray-900 mb-2">First Name</label>
                                             <div className="relative">
@@ -153,8 +153,7 @@ export default function LoginSignup() {
                 </div>
             </div>
 
-            {/* Footer */}
-            <Footer />
+      
         </div>
         </>
     );

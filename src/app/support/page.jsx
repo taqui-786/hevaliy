@@ -411,7 +411,7 @@ export default function SupportPage() {
           className={`${switzer.className} w-full max-w-full lg:max-w-7xl mx-auto lg:px-6 lg:py-12 flex flex-col lg:block px-4`}
         >
           {/* --- 1. Top Heading Section --- */}
-          <div className="text-center mb-32 mt-32 lg:mt-62 max-w-full lg:max-w-2xl mx-auto">
+          <div className="text-center mb-12 md:mb-32 mt-32 lg:mt-62 max-w-full lg:max-w-2xl mx-auto">
             <h1 className="text-4xl font-semibold mb-4">Help Centre</h1>
             <p className="text-gray-500 text-md ">
               We know that reaching out for support or navigating a new platform
@@ -420,7 +420,7 @@ export default function SupportPage() {
               every step of the way.
             </p>
           </div>
-          <div className="w-full flex justify-center mb-50">
+          <div className="w-full flex justify-center mb-12 sm:mb-25 md:mb-50">
             {/* Mobile Layout */}
             <div className="flex md:hidden flex-col gap-3 w-full max-w-md px-4">
               {/* Input */}
@@ -501,7 +501,7 @@ export default function SupportPage() {
 
           {/* --- 2. Feature Cards --- */}
           <div
-            className={`${switzer.className} grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-52 max-w-5xl mx-auto`}
+            className={`${switzer.className} grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12 md:mb-52 max-w-5xl mx-auto`}
           >
             <FeatureCard
               src="/icons/consumer-protection_11668189 1.svg"
@@ -521,7 +521,7 @@ export default function SupportPage() {
           </div>
 
           {/* --- 3. Main Content Columns (Sidebar + Guide) --- */}
-          <div className="flex flex-col lg:flex-row mb-32 p-0">
+          <div className="flex flex-col lg:flex-row mb-12 md:mb-32 p-0">
             {/* Left Sidebar (Desktop Only) */}
             <div className="w-57 hidden lg:block">
               <HelpCentreNav />

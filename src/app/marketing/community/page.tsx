@@ -158,7 +158,7 @@ const CommunityPage = () => {
       <main>
         {/* Hero / Banner Section */}
         <section
-          className={`${switzer.className} pt-70 mb-35 px-4 md:px-10 max-w-5xl mx-auto text-center`}
+          className={`${switzer.className} pt-24 md:pt-36  lg:pt-70 mb-8 lg:mb-35 px-4 md:px-10 max-w-5xl mx-auto text-center`}
         >
           <h1 className="text-3xl mb-4">Welcome to the Heartivy Community</h1>
           <p className="text-gray-600 mx-auto">
@@ -182,7 +182,7 @@ const CommunityPage = () => {
         <section className="px-4 my-2 max-w-3xl mx-auto mb-18">
           <div className="bg-transparent md:bg-white md:rounded-3xl md:px-6 md:py-4 md:shadow-lg md:border md:border-gray-100">
             {/* SEARCH INPUT */}
-            <div className="bg-white rounded-3xl px-6 py-4 shadow-lg border border-gray-100 md:border-none md:shadow-none md:bg-transparent md:rounded-none md:px-0 md:py-0">
+            <div className="bg-white rounded-3xl px-1 py-1 sm:px-6 sm:py-4 shadow-lg border border-gray-100 md:border-none md:shadow-none md:bg-transparent md:rounded-none md:px-0 md:py-0">
               <div className="flex items-center gap-3 w-full border border-gray-200 bg-[#F4F5F7] rounded-full px-5 py-2.5">
                 <Search className="text-gray-400" size={20} />
                 <input
@@ -196,7 +196,7 @@ const CommunityPage = () => {
             </div>
 
             {/* TAGS ROW */}
-            <div className="flex flex-wrap gap-3 mt-5">
+            <div className="flex flex-wrap gap-3 mt-5 md:justify-start justify-center">
               {tagsList.map((item, index) => (
                 <button
                   key={index}
@@ -274,8 +274,8 @@ const CommunityPage = () => {
         </section>
 
         {/* You Might Be Looking For - Card List */}
-        <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
-          <div className="w-full py-12 px-0 md:px-26 bg-[#FCF9FE]">
+        <section className="px-4 md:px-8 max-w-7xl mx-auto">
+          <div className="w-full py-12 sm:py-32 px-0 md:px-26 bg-transparent lg:bg-[#FCF9FE]">
             {/* Section Title */}
             <h2 className="text-center text-md text-gray-800 mb-10">
               Most Uplifting Stories This Week
