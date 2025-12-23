@@ -23,7 +23,7 @@ export default function NavBar() {
     { name: "Home", href: "/" },
     { name: "About", href: "/marketing/about" },
     { name: "Get Support", href: "/support" },
-    { name: "Resources", href: "/" },
+    { name: "Resources", href: "/resource" },
     { name: "Community", href: "/marketing/community" },
   ];
 
@@ -61,7 +61,7 @@ export default function NavBar() {
     }
     return () => (document.body.style.overflow = "auto");
   }, [open]);
-console.log(pathname);
+
 
   return (
     <div className="relative">
@@ -132,7 +132,7 @@ console.log(pathname);
           transition-all duration-300
           ${
             scrolled
-              ? "bg-white/10 backdrop-blur-xl shadow-lg py-4"
+              ? "bg-white/10 backdrop-blur-xl shadow-lg py-4 ring-b rounded-b-2xl"
               : "bg-transparent"
           }
           ${open ? "md:block hidden" : "block"}

@@ -55,7 +55,7 @@ export default function HealingSection() {
   md:text-base
   leading-relaxed
   max-w-xs
-  line-clamp-5
+  line-clamp-6
   overflow-hidden
 "
             >
@@ -78,7 +78,7 @@ export default function HealingSection() {
         </div>
 
         {/* ==== DESKTOP VIEW ==== */}
-        <div className="hidden md:flex col-span-2 gap-8 px-0  lg:px-8 xl:px-18">
+        <div className="hidden md:flex col-span-2 gap-8 px-0  lg:pr-8 xl:pr-18">
           {/* LEFT IMAGE */}
           <div className="w-full rounded-2xl overflow-hidden bg-gray-200 shadow-md">
             <Image
@@ -106,12 +106,11 @@ export default function HealingSection() {
         <div
           className={`${nunito.className} hidden md:flex justify-center items-center font-bold`}
         >
-          <div className="max-w-sm">
+          <div className="max-w-lg">
             <p
               className="
   text-left
-  lg:text-2xl
-  md:text-base
+xl:text-2xl lg:text-base text-sm
   leading-relaxed
   line-clamp-5
   overflow-hidden
@@ -126,7 +125,7 @@ export default function HealingSection() {
       </div>
 
       {/* ⭐ SECOND ROW */}
-      <div className="grid grid-cols-1 md:grid-cols-3  gap-6 lg:pl-18 ">
+      <div className="grid grid-cols-1 md:grid-cols-3  gap-6 pl-0  ">
         {/* ==== SMALL SCREEN FIRST IMAGE (LEFT) ==== */}
         <div className="md:hidden flex justify-start">
           <div className="w-[55%] xs:w-[40%] rounded-2xl overflow-hidden bg-gray-200 shadow-md">
@@ -183,7 +182,7 @@ export default function HealingSection() {
           <div className="flex flex-col items-start">
             <QuoteIcon className="text-2xl rotate-180 text-[#8BA764] mb-4" />
             <p>
-              <span className="lg:text-2xl md:text-base font-bold">
+              <span className="  xl:text-2xl lg:text-base text-sm font-bold">
                 Every sunrise feels like a quiet victory — proof that even after
                 the darkest nights, light always returns.
                 <p className="">
@@ -195,13 +194,13 @@ export default function HealingSection() {
           </div>
         </div>
 
-        <div className="hidden md:flex col-span-2 gap-8  pl-0  lg:pl-8 xl:pl-18">
+        <div className="hidden md:flex col-span-2 gap-8  pl-0  lg:pl-8 2xl:pl-18">
           {/* MIDDLE IMAGE */}
           <div className="w-full rounded-2xl overflow-hidden bg-gray-200 shadow-md">
             <Image
               src={img3}
               alt="img3"
-              width={450}
+                 width={450}
               height={368}
               className="object-cover w-full h-full"
             />

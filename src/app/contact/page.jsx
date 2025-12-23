@@ -4,16 +4,25 @@ import { HeartPulse } from 'lucide-react';
 
 export default function ContactPage() {
   return (
-    <div style={{ fontFamily: "Arial" }} className="min-h-screen bg-white font-sans text-gray-800 flex flex-col">
+    <div  className="min-h-screen bg-white font-sans text-gray-800 flex flex-col relative    bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: "url('/images/Topographic 5.png')",
+        backgroundRepeat: "repeat",
+        backgroundSize: "contain", // or "auto"
+        backgroundPosition: "center",
+        mixBlendMode: "screen",
+        backgroundColor: "#fff",
+        fontFamily: "Arial" 
+      }}>
       
       <Navbar />
 
       {/* Added responsive padding but kept lg view same */}
-      <main className="grow max-w-5xl mx-auto py-16 w-full px-4 lg:px-0">
+      <main className="grow max-w-5xl mx-auto py-2 md:py-16 w-full p-8 sm:px-12 lg:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-50  gap-10 lg:mb-38 lg:mt-52 my-26 ">
 
           {/* LEFT SIDE */}
-          <div className="pt-4 lg:pt-8">
+          <div className="md:pt-4 lg:pt-8">
             <span className="inline-block bg-[#DBEAFE] text-[#9B8BAB] px-3 py-1.5 rounded-full text-[11px] font-medium mb-3">
               Contact Us
             </span>
@@ -22,16 +31,16 @@ export default function ContactPage() {
               Let's Get in Touch.
             </h1>
 
-            <p className="text-gray-400 text-[13px] mb-3">
+            <p className="text-[#8F7A9C] text-[13px] mb-3">
               Sometimes reaching out is the first step toward feeling a little lighter.
             </p>
-            <p className="text-gray-400 text-[13px] mb-6">
+            <p className="text-[#8F7A9C] text-[13px] mb-6">
               If you have questions, need support, or simply want to share feedback, we are here — listening, without judgment.
             </p>
 
             <div className="mb-8 text-[13px]">
               <p className="text-gray-800 font-medium mb-1">If you prefer, you can also reach us at:</p>
-              <a href="mailto:support@heartivy.com" className="text-gray-400 hover:underline">
+              <a href="mailto:support@heartivy.com" className="text-[#8F7A9C] hover:underline">
                 support@heartivy.com
               </a>
             </div>
@@ -42,7 +51,7 @@ export default function ContactPage() {
           </div>
 
           {/* RIGHT SIDE FORM */}
-          <div className="bg-white rounded-lg p-4 md:p-6 shadow-[0_8px_30px_rgb(0,0,0,.2)] border border-gray-50">
+          <div className="bg-white/20 rounded-lg p-4 md:p-6 shadow-[0_8px_30px_rgba(0,0,0,0.1)] border border-white/20 w-full lg:w-md">
             <form className="space-y-4">
 
               {/* Name + Email */}
@@ -72,7 +81,7 @@ export default function ContactPage() {
                   What can we help you with?
                 </label>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-y-1 gap-x-4">
-                  <CheckboxItem label="Support Chat" />
+                  <CheckboxItem label="Support Chat"  />
                   <CheckboxItem label="Professional Counseling" />
                   <CheckboxItem label="Community Circles" />
                   <CheckboxItem label="Wellness Resources" />
@@ -118,7 +127,7 @@ export default function ContactPage() {
 function Field({ label, type, placeholder }) {
   return (
     <div className="flex flex-col gap-1.5">
-      <label className="text-xs font-medium text-gray">{label}</label>
+      <label className="text-xs font-medium text-black">{label}</label>
       <input type={type} placeholder={placeholder} className="w-full bg-gray-100 rounded-lg px-4 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-purple-200" />
     </div>
   );
@@ -128,7 +137,7 @@ function CheckboxItem({ label }) {
   return (
     <label className="flex items-center gap-2 cursor-pointer">
       <input type="checkbox" className="peer sr-only" />
-      <div className="w-3 h-3 rounded border border-gray-300 peer-checked:bg-gray-200 peer-checked:border-gray-200 flex items-center justify-center transition">
+      <div className="w-3 h-3 rounded border border-gray-300 bg-[#F3F3F5] peer-checked:bg-gray-200 peer-checked:border-gray-200 flex items-center justify-center transition">
         <svg className="w-3 h-3 text-white opacity-0 peer-checked:opacity-100" fill="none" stroke="currentColor" strokeWidth="3">
           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
         </svg>

@@ -217,7 +217,7 @@ const CommunityPage = () => {
         </section>
 
         {/* Featured Groups/Topics Grid */}
-        <section className="px-4 md:px-12 max-w-6xl mx-auto mb-0 md:mb-40">
+        <section className="px-4 md:px-12 max-w-6xl mx-auto mb-8 lg:mb-40">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {filteredCards.map((card, index) => (
               <div
@@ -275,7 +275,7 @@ const CommunityPage = () => {
 
         {/* You Might Be Looking For - Card List */}
         <section className="px-4 md:px-8 max-w-7xl mx-auto">
-          <div className="w-full py-12 sm:py-32 px-0 md:px-26 bg-transparent lg:bg-[#FCF9FE]">
+          <div className="w-full py-2 lg:py-32 px-0 md:px-26 bg-transparent lg:bg-[#FCF9FE]">
             {/* Section Title */}
             <h2 className="text-center text-md text-gray-800 mb-10">
               Most Uplifting Stories This Week
@@ -321,7 +321,7 @@ const CommunityPage = () => {
           </div>
         </section>
 
-        <div className="w-full py-4 sm:py-8 px-6 flex flex-col items-center">
+        <div className="w-full py-4 sm:py-8 px-6 hidden lg:flex flex-col items-center">
           {/* Title */}
           <h2 className="text-md text-gray-800">Celebrate Kindness</h2>
           <p className="text-gray-500 mt-2 text-sm text-center">
@@ -386,8 +386,8 @@ const CommunityPage = () => {
         </div>
 
         {/* Community Pillars / Why Join? */}
-        <section className="px-4 max-w-3xl mx-auto mb-8 md:mb-48 flex justify-center">
-          <div className="mt-14 bg-[#F4EFFF] pt-8 px-8 pb-4 rounded-2xl shadow-md w-full max-w-3xl">
+        <section className="px-4 max-w-3xl mx-auto mb-8 md:mb-48 hidden lg:flex justify-center">
+          <div className="mt-14 bg-[#F4EFFF] pt-8 px-8 pb-4 rounded-xl shadow-md w-full max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-1.5 bg-white rounded-full">
                 <Shield className="text-purple-600 w-5" />
@@ -424,7 +424,20 @@ const CommunityPage = () => {
             </button>
           </div>
         </section>
-
+        <section className="px-4 md:px-8 my-8 block lg:hidden">
+          <div className="w-full p-10  flex flex-col items-center justify-center gap-4 bg-[#EFF6FF] rounded-2xl">
+            <h2 className="text-lg font-medium">Community Safety & Emotional Guidelines</h2>
+            <div className="w-full flex flex-col gap-4  ">
+              <div className="flex items-center justify-start gap-2 text-base w-full"><span className=" text-[#8F7A9C]">✓</span><p className="text-[#364153]">Respect confidentiality.</p></div>
+              <div className="flex items-center justify-start gap-2 text-base w-full"><span className=" text-[#8F7A9C]">✓</span><p className="text-[#364153]">No hate speech or bullying.</p></div>
+              <div className="flex items-center justify-start gap-2 text-base w-full"><span className=" text-[#8F7A9C]">✓</span><p className="text-[#364153]">Seek professional support if in crisis.</p></div>
+              <div className="flex items-center justify-start gap-2 text-base w-full"><span className=" text-[#8F7A9C]">✓</span><p className="text-[#364153]">Be mindful of triggers.</p></div>
+              <div className="flex items-center justify-start gap-2 text-base w-full"><span className=" text-[#8F7A9C]">✓</span><p className="text-[#364153]">Support, don't diagnose.</p></div>
+            </div>
+            <p className="text-lg font-medium w-fit mx-auto text-[#8F7A9C] ">View Full Guidelines</p>
+          </div>
+        </section>
+        {/* here */}
         <SubscribeSection />
       </main>
 

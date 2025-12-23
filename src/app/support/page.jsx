@@ -272,7 +272,7 @@ function GettingStartedAccordion() {
   return (
     <>
       {/* For tablet and desktop - accordion style */}
-      <div className="grow pt-8 max-w-5xl bg-gray-100 p-6 md:p-8 lg:pl-28 border border-gray-200 lg:border-l-2 border-t-0 border-b-0 border-r-0">
+      <div className="grow pt-8 max-w-5xl bg-gray-100 p-6 md:p-8 lg:pl-28 border border-gray-200 lg:border-l-2 border-t-0 border-b-0 border-r-0 ">
         {/* Mobile: Collapsible Getting Started Header */}
         <div className="md:hidden">
           <button
@@ -420,7 +420,7 @@ export default function SupportPage() {
               every step of the way.
             </p>
           </div>
-          <div className="w-full flex justify-center mb-12 sm:mb-25 md:mb-50">
+          <div className="w-full flex justify-center mb-12 sm:mb-25 md:mb-56">
             {/* Mobile Layout */}
             <div className="flex md:hidden flex-col gap-3 w-full max-w-md px-4">
               {/* Input */}

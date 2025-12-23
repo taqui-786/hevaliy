@@ -23,7 +23,7 @@ export default function AboutPage() {
         {/* --- Hero Section --- */}
         <div className="text-center mb-12 md:mb-24 px-4">
           <div className="flex justify-center mb-4">
-            <div className="relative inline-block px-2 py-0">
+            <div className="relative inline-block px-2  py-0 mb-8 lg:mb-0">
               {/* Top-left corner crosshair */}
               <div className="absolute top-0 left-0">
                 <div className="absolute top-[-5px] left-0 w-[1.5px] h-[20px] bg-black"></div>
@@ -37,7 +37,7 @@ export default function AboutPage() {
               <span className="text-lg md:text-xl font-medium">About Ous</span>
             </div>
           </div>
-          <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900">
+          <h1 className="text-2xl md:text-4xl font-medium mb-1 lg:mb-4 text-gray-900">
             Because no one deserves to feel alone in their pain.
           </h1>
           <p className="text-gray-900 max-w-2xl mx-auto text-sm md:text-lg px-4 md:px-0">
@@ -233,10 +233,10 @@ export default function AboutPage() {
       {/* --- Stories Section --- */}
       <section className="mt-8 md:mt-16 px-4 md:px-6 md:mb-70 mb-20">
         <div className="mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 md:gap-x-45 md:gap-y-20 px-2 md:px-30">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 md:gap-x-12 lg:gap-x-45 md:gap-y-20 px-2 xl:px-30">
             <div className="w-[85%] md:w-full justify-self-start">
-              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 sm:px-10 md:px-12 py-8 md:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
-                <p className="text-base sm:text-base md:text-xl font-medium leading-relaxed text-neutral-700  text-center">
+              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 md:px-10 lg:px-12 py-4 lg:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
+                <p className="text-base sm:text-base lg:text-xl font-medium leading-relaxed text-neutral-700  text-center">
                   "Heartivy helped me open up for the first time. I never
                   thought I could share my feelings so freely, but the community
                   here made me feel safe and understood."
@@ -245,8 +245,8 @@ export default function AboutPage() {
             </div>
 
             <div className="w-[85%] md:w-full justify-self-end">
-              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 sm:px-10 md:px-12 py-8 md:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
-                <p className="text-base sm:text-base md:text-xl font-medium leading-relaxed text-neutral-700  text-center">
+              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 md:px-10 lg:px-12 py-4 lg:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
+                <p className="text-base sm:text-base lg:text-xl font-medium leading-relaxed text-neutral-700  text-center">
                   "It's not therapy — it's comfort from someone who just
                   understands. Sometimes that's exactly what you need to get
                   through a tough day."
@@ -255,8 +255,8 @@ export default function AboutPage() {
             </div>
 
             <div className="w-[85%] md:w-full justify-self-start">
-              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 sm:px-10 md:px-12 py-8 md:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
-                <p className="text-base sm:text-base md:text-xl font-medium leading-relaxed text-neutral-700  text-center">
+              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 md:px-10 lg:px-12 py-4 lg:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
+                <p className="text-base sm:text-base lg:text-xl font-medium leading-relaxed text-neutral-700  text-center">
                   "The anonymous chats gave me courage to speak about things I'd
                   been holding in for years. I finally feel like I'm not
                   carrying this weight alone."
@@ -265,8 +265,8 @@ export default function AboutPage() {
             </div>
 
             <div className="w-[85%] md:w-full justify-self-end">
-              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 sm:px-10 md:px-12 py-8 md:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
-                <p className="text-base sm:text-base md:text-xl font-medium leading-relaxed text-neutral-700  text-center">
+              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 md:px-10 lg:px-12 py-4 lg:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
+                <p className="text-base sm:text-base lg:text-xl font-medium leading-relaxed text-neutral-700  text-center">
                   "Heartivy reminded me that vulnerability is not weakness. It's
                   the first step toward healing, and I'm grateful for this
                   community every day."
