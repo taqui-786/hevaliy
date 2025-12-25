@@ -73,18 +73,18 @@ export default function TestimonialSection() {
 
   return (
     <section
-      className={`${switzer.className} w-full py-10 px-6 md:px-12 lg:px-20 md:mb-32 mb-20`}
+      className={`${switzer.className} w-full py-10 px-6 md:px-8 xl:px-12 2xl:px-20 md:mb-32 mb-20`}
     >
       {/* GRID FIXED FOR MD AND UP */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 lg:px-12">
+      <div className="flex flex-col lg:flex-row  gap-4 xl:gap-8 2xl:gap-12 2xl:20 2xl:px-12">
         {/* LEFT SIDE TEXT */}
-        <div className="flex flex-col ">
-          <h2 className="font-semibold text-4xl md:text-5xl lg:text-[64px] text-[#575757] leading-tight">
+        <div className="flex flex-col w-full lg:w-[40%] xl:w-1/2 items-start ">
+          <h2 className="font-semibold text-4xl sm:text-5xl xl:text-[64px] text-[#575757] leading-tight inline-block w-fit">
             What Are People <br /> Saying
             <span className="text-[#164D24]"> About Us</span>
           </h2>
 
-          <p className="md:text-lg text-base text-[#999999] leading-[175%] mt-4 max-w-[360px]">
+          <p className=" lg:text-lg text-base text-[#999999] leading-[175%] mt-4 max-w-[360px]">
             We are very happy if you are satisfied with our service. Let’s read
             pure reviews from customers who bought our products.
           </p>
@@ -119,7 +119,7 @@ export default function TestimonialSection() {
         </div>
 
         {/* RIGHT SIDE SLIDES */}
-        <section className="w-full h-full flex">
+        <section className=" h-full flex w-auto lg:w-[60%] xl:w-1/2">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}

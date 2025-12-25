@@ -79,12 +79,12 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <p className="text-gray-400 text-sm md:text-[20px] font-semibold text-center mb-12 md:mb-70">
+        <p className="text-gray-400 text-sm md:text-[20px] font-semibold text-center mb-12 md:mb-20 xl:mb-70">
           Trusted by many
         </p>
 
         {/* --- Our Story Section --- */}
-        <div className="flex flex-col md:flex-row gap-5 md:gap-10 mb-12 md:mb-24 px-4">
+        <div className="flex flex-col md:flex-row gap-5 md:gap-10 mb-12 xl:mb-24 px-4">
           <div className="w-full md:w-1/2 relative h-auto aspect-2440/1500  md:h-80 rounded-2xl overflow-hidden">
             <Image
               src="/images/Rectangle 42033.png"
@@ -112,7 +112,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="sm:flex justify-center items-center mb-12 md:mb-52 hidden ">
+        <div className="sm:flex justify-center items-center mb-12 md:mb-20 xl:mb-52 hidden ">
           <span className="bg-gray-400 w-32 md:w-45 h-1.5 rounded-full opacity-50"></span>
         </div>
 
@@ -176,7 +176,7 @@ export default function AboutPage() {
         </div>
 
         {/* --- Our Mission --- */}
-        <div className="text-center mb-12 md:mb-24 mt-20 md:mt-56 px-4 md:px-43">
+        <div className="text-center my-12 md:my-24 px-4 md:px-43">
           <h2 className="text-xl font-medium mb-4 md:text-2xl">Our Mission</h2>
           <p className="text-neutral-700  text-base md:text-xl mb-8 font-light">
             To create a world where emotional support is accessible to everyone,
@@ -204,7 +204,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="text-center mt-20 md:mt-56 px-4 md:px-43">
+        <div className="text-center mt-20 md:mt-24 lg:mt-56 px-4 md:px-43">
           <h2 className="text-xl font-medium mb-4 md:text-2xl">
             The Hearts Behind Heartivy
           </h2>
@@ -221,7 +221,7 @@ export default function AboutPage() {
           <TeamMember img="/images/Rectangle 42047.png" />
         </div>
 
-        <div className="text-center mt-20 md:mt-56 px-4 md:px-43">
+        <div className="text-center mt-20 md:mt-24 lg:mt-56 px-4 md:px-43">
           <h2 className="text-xl font-medium mb-4 md:text-2xl">Stories of Hope</h2>
           <p className="text-neutral-700 text-base md:text-xl font-light mb-8">
             Real voices from our community sharing their experiences of healing
@@ -231,11 +231,11 @@ export default function AboutPage() {
       </main>
 
       {/* --- Stories Section --- */}
-      <section className="mt-8 md:mt-16 px-4 md:px-6 md:mb-70 mb-20">
+      <section className="mt-8 md:mt-16 px-4 md:px-6 lg:mb-40 xl:mb-70 mb-20">
         <div className="mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 md:gap-x-12 lg:gap-x-45 md:gap-y-20 px-2 xl:px-30">
             <div className="w-[85%] md:w-full justify-self-start">
-              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 md:px-10 lg:px-12 py-4 lg:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
+              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 md:px-4 lg:px-12 py-4 lg:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
                 <p className="text-base sm:text-base lg:text-xl font-medium leading-relaxed text-neutral-700  text-center">
                   "Heartivy helped me open up for the first time. I never
                   thought I could share my feelings so freely, but the community
@@ -245,7 +245,7 @@ export default function AboutPage() {
             </div>
 
             <div className="w-[85%] md:w-full justify-self-end">
-              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 md:px-10 lg:px-12 py-4 lg:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
+              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 md:px-4 lg:px-12 py-4 lg:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
                 <p className="text-base sm:text-base lg:text-xl font-medium leading-relaxed text-neutral-700  text-center">
                   "It's not therapy — it's comfort from someone who just
                   understands. Sometimes that's exactly what you need to get
@@ -255,7 +255,7 @@ export default function AboutPage() {
             </div>
 
             <div className="w-[85%] md:w-full justify-self-start">
-              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 md:px-10 lg:px-12 py-4 lg:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
+              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 md:px-4 lg:px-12 py-4 lg:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
                 <p className="text-base sm:text-base lg:text-xl font-medium leading-relaxed text-neutral-700  text-center">
                   "The anonymous chats gave me courage to speak about things I'd
                   been holding in for years. I finally feel like I'm not
@@ -265,7 +265,7 @@ export default function AboutPage() {
             </div>
 
             <div className="w-[85%] md:w-full justify-self-end">
-              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 md:px-10 lg:px-12 py-4 lg:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
+              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 md:px-4 lg:px-12 py-4 lg:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
                 <p className="text-base sm:text-base lg:text-xl font-medium leading-relaxed text-neutral-700  text-center">
                   "Heartivy reminded me that vulnerability is not weakness. It's
                   the first step toward healing, and I'm grateful for this
