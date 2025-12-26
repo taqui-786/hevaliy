@@ -156,7 +156,7 @@ xl:text-2xl lg:text-base text-sm
             >
               Every sunrise feels like a quiet victory — proof that even after
               the darkest nights, light always returns.
-              <p className="">
+              <p >
                 Heartivy is where healing grows slowly, where strength is found
                 in softness, and where hope learns to breathe again.
               </p>

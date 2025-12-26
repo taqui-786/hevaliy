@@ -93,21 +93,26 @@ export default function AboutPage() {
               className="object-cover"
             />
           </div>
-          <div className="w-full md:w-1/2 flex flex-col justify-center">
-            <h2 className="text-2xl md:text-3xl text-center md:text-left font-semibold mb-4 text-gray-900">
+          <div className="w-full md:w-2xl flex flex-col justify-center">
+            <h2 className="text-xl md:text-2xl text-center md:text-left font-semibold mb-2 text-gray-900">
               Our Story
             </h2>
-            <p className="text-gray-900 text-base md:text-xl text-center md:text-left font-light mb-0 md:mb-4">
+            <p className="text-gray-900 text-base md:text-lg text-center md:text-left font-light mb-0 md:mb-1">
               Heartivy began with a simple truth: in a world more connected than
               ever, loneliness and emotional pain often go unspoken. We saw
               people struggling in silence, carrying burdens they felt they had
               to bear alone.
             </p>
-            <p className="text-gray-900 text-base md:text-xl text-center md:text-left font-light">
+            <p className="text-gray-900 text-base md:text-lg text-center md:text-left font-light mb-0 md:mb-1">
               Our founders experienced firsthand the isolation that comes with
               mental health challenges. They understood that sometimes, what we
               need most isn't clinical intervention—it's human connection,
               empathy, and the reassurance that we're not alone.
+            </p>
+            <p className="text-gray-900 text-base md:text-lg text-center md:text-left font-light">
+              Heartivy was built to be that safe space—a gentle refuge where
+              healing happens through understanding, where stories are shared
+              without judgment, and where every voice matters.
             </p>
           </div>
         </div>
@@ -120,7 +125,7 @@ export default function AboutPage() {
         <div className="mb-12 md:mb-24 px-4">
           <div className="text-center mb-8 md:mb-22">
             <h2 className="text-xl text-gray-800 md:text-2xl">What We Do</h2>
-            <p className="text-neutral-700  text-base md:text-xl font-light mt-2">
+            <p className="text-neutral-700  text-base md:text-lg font-light mt-2">
               We provide tools and spaces designed to support your emotional
               well-being, wherever you are in your journey.
             </p>
@@ -177,8 +182,8 @@ export default function AboutPage() {
 
         {/* --- Our Mission --- */}
         <div className="text-center my-12 md:my-24 px-4 md:px-43">
-          <h2 className="text-xl font-medium mb-4 md:text-2xl">Our Mission</h2>
-          <p className="text-neutral-700  text-base md:text-xl mb-8 font-light">
+          <h2 className="text-xl font-medium mb-2 md:text-2xl">Our Mission</h2>
+          <p className="text-neutral-700  text-base md:text-lg mb-8 font-light">
             To create a world where emotional support is accessible to everyone,
             where vulnerability is met with compassion, and where no one has to
             navigate their mental health journey alone. We believe in the power
@@ -205,10 +210,10 @@ export default function AboutPage() {
         </div>
 
         <div className="text-center mt-20 md:mt-24 lg:mt-56 px-4 md:px-43">
-          <h2 className="text-xl font-medium mb-4 md:text-2xl">
+          <h2 className="text-xl font-medium mb-2 md:text-2xl">
             The Hearts Behind Heartivy
           </h2>
-          <p className="text-neutral-700  text-base md:text-xl font-light mb-8">
+          <p className="text-neutral-700  text-base md:text-lg font-light mb-8">
             We're a team of empaths, listeners, and advocates who believe in the
             healing power of connection.
           </p>
@@ -222,8 +227,10 @@ export default function AboutPage() {
         </div>
 
         <div className="text-center mt-20 md:mt-24 lg:mt-56 px-4 md:px-43">
-          <h2 className="text-xl font-medium mb-4 md:text-2xl">Stories of Hope</h2>
-          <p className="text-neutral-700 text-base md:text-xl font-light mb-8">
+          <h2 className="text-xl font-medium mb-2 md:text-2xl">
+            Stories of Hope
+          </h2>
+          <p className="text-neutral-700 text-base md:text-lg font-light mb-8">
             Real voices from our community sharing their experiences of healing
             and connection
           </p>
@@ -235,8 +242,8 @@ export default function AboutPage() {
         <div className="mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 md:gap-x-12 lg:gap-x-45 md:gap-y-20 px-2 xl:px-30">
             <div className="w-[85%] md:w-full justify-self-start">
-              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 md:px-4 lg:px-12 py-4 lg:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
-                <p className="text-base sm:text-base lg:text-xl font-medium leading-relaxed text-neutral-700  text-center">
+              <blockquote className="bg-[#F5F5F7] rounded-3xl px-6 md:px-4 lg:px-12 py-4 lg:py-8 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
+                <p className="text-base sm:text-base lg:text-lg font-medium leading-relaxed text-neutral-700  text-center">
                   "Heartivy helped me open up for the first time. I never
                   thought I could share my feelings so freely, but the community
                   here made me feel safe and understood."
@@ -245,8 +252,8 @@ export default function AboutPage() {
             </div>
 
             <div className="w-[85%] md:w-full justify-self-end">
-              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 md:px-4 lg:px-12 py-4 lg:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
-                <p className="text-base sm:text-base lg:text-xl font-medium leading-relaxed text-neutral-700  text-center">
+              <blockquote className="bg-[#F5F5F7] rounded-3xl px-6 md:px-4 lg:px-12 py-4 lg:py-8 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
+                <p className="text-base sm:text-base lg:text-lg font-medium leading-relaxed text-neutral-700  text-center">
                   "It's not therapy — it's comfort from someone who just
                   understands. Sometimes that's exactly what you need to get
                   through a tough day."
@@ -255,8 +262,8 @@ export default function AboutPage() {
             </div>
 
             <div className="w-[85%] md:w-full justify-self-start">
-              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 md:px-4 lg:px-12 py-4 lg:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
-                <p className="text-base sm:text-base lg:text-xl font-medium leading-relaxed text-neutral-700  text-center">
+              <blockquote className="bg-[#F5F5F7] rounded-3xl px-6 md:px-4 lg:px-12 py-4 lg:py-8 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
+                <p className="text-base sm:text-base lg:text-lg font-medium leading-relaxed text-neutral-700  text-center">
                   "The anonymous chats gave me courage to speak about things I'd
                   been holding in for years. I finally feel like I'm not
                   carrying this weight alone."
@@ -265,8 +272,8 @@ export default function AboutPage() {
             </div>
 
             <div className="w-[85%] md:w-full justify-self-end">
-              <blockquote className="bg-[#F5F5F7] rounded-[2.5rem] px-6 md:px-4 lg:px-12 py-4 lg:py-10 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
-                <p className="text-base sm:text-base lg:text-xl font-medium leading-relaxed text-neutral-700  text-center">
+              <blockquote className="bg-[#F5F5F7] rounded-3xl px-6 md:px-4 lg:px-12 py-4 lg:py-8 w-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-gray-100/50">
+                <p className="text-base sm:text-base lg:text-lg font-medium leading-relaxed text-neutral-700  text-center">
                   "Heartivy reminded me that vulnerability is not weakness. It's
                   the first step toward healing, and I'm grateful for this
                   community every day."

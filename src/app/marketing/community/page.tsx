@@ -438,7 +438,7 @@ const CommunityPage = () => {
           </div>
         </section>
         {/* here */}
-        <SubscribeSection />
+        <SubscribeSection isCommunityPage={true} />
       </main>
 
       {/* 2. Footer Component Import */}

@@ -27,7 +27,7 @@ export default function HomePage() {
       <HealingSection />
       <SupportSection />
       <Testimonial />
-      <SubscribeSection />
+      <SubscribeSection isCommunityPage={false} />
       <Footer />
     </div>
 

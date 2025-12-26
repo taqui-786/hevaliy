@@ -1,19 +1,21 @@
 import Image from "next/image";
-import { Nunito_Sans, Poppins } from "next/font/google";
+import {  Poppins } from "next/font/google";
 
-const nunito = Nunito_Sans({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
-});
+
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
 
-export default function SubscribeSection() {
+export default function SubscribeSection({isCommunityPage}:{isCommunityPage:boolean}) {
+  const isCommunityPageStyle = isCommunityPage ? "lg:block hidden" : "block";
   return (
     <>
+    {
+      isCommunityPage ? 
+
+
         <section
       className={`px-4 md:px-10 max-w-5xl mx-auto md:mb-40 mb-20 lg:hidden block ${poppins.className}`}
     >
@@ -55,9 +57,10 @@ export default function SubscribeSection() {
         </div>
       </div>
     </section>
- 
+       :""
+    }
     <section
-      className={`px-4 md:px-10 max-w-5xl mx-auto md:mb-40 mb-20 lg:block hidden ${poppins.className}`}
+      className={`px-4 md:px-10 max-w-5xl mx-auto md:mb-40 mb-20 ${isCommunityPageStyle} ${poppins.className}`}
     >
       {/* Card */}
       <div className="relative max-w-6xl w-full rounded-4xl bg-[#EDEDED] overflow-hidden">
