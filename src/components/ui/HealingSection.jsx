@@ -47,11 +47,11 @@ export default function HealingSection() {
           className={`${nunito.className} md:hidden font-bold flex justify-center md:justify-start items-center`}
         >
           <div className="w-fit flex flex-col items-start justify-center">
-            <QuoteIcon className="text-2xl rotate-180 text-[#8BA764] " />
+            <QuoteIcon className="text-xl rotate-180 text-[#8BA764] " />
             <p
               className="
   text-left
-  lg:text-2xl
+  lg:text-xl
   md:text-base
   leading-relaxed
   max-w-xs
@@ -110,7 +110,7 @@ export default function HealingSection() {
             <p
               className="
   text-left
-xl:text-2xl lg:text-base text-sm
+xl:text-xl lg:text-base text-sm
   leading-relaxed
   line-clamp-5
   overflow-hidden
@@ -156,7 +156,7 @@ xl:text-2xl lg:text-base text-sm
             >
               Every sunrise feels like a quiet victory — proof that even after
               the darkest nights, light always returns.
-              <p >
+              <p>
                 Heartivy is where healing grows slowly, where strength is found
                 in softness, and where hope learns to breathe again.
               </p>
@@ -200,7 +200,7 @@ xl:text-2xl lg:text-base text-sm
             <Image
               src={img3}
               alt="img3"
-                 width={450}
+              width={450}
               height={368}
               className="object-cover w-full h-full"
             />
