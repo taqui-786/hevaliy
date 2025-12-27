@@ -47,11 +47,11 @@ export default function HealingSection() {
           className={`${nunito.className} md:hidden font-bold flex justify-center md:justify-start items-center`}
         >
           <div className="w-fit flex flex-col items-start justify-center">
-            <QuoteIcon className="text-2xl rotate-180 text-[#8BA764] " />
+            <QuoteIcon className="text-xl rotate-180 text-[#8BA764] " />
             <p
               className="
   text-left
-  lg:text-2xl
+  lg:text-xl
   md:text-base
   leading-relaxed
   max-w-xs
@@ -110,7 +110,7 @@ export default function HealingSection() {
             <p
               className="
   text-left
-xl:text-2xl lg:text-base text-sm
+xl:text-xl lg:text-base text-sm
   leading-relaxed
   line-clamp-6
   overflow-hidden
