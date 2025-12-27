@@ -411,7 +411,7 @@ export default function SupportPage() {
           className={`${switzer.className} w-full max-w-full lg:max-w-7xl mx-auto lg:px-6 lg:py-12 flex flex-col lg:block px-4`}
         >
           {/* --- 1. Top Heading Section --- */}
-          <div className="text-center mb-12 md:mb-32 mt-32 lg:mt-62 max-w-full lg:max-w-2xl mx-auto">
+          <div className="text-center mb-12 md:mb-30 mt-32 lg:mt-48 max-w-full lg:max-w-2xl mx-auto">
             <h1 className="text-4xl font-semibold mb-4">Help Centre</h1>
             <p className="text-gray-500 text-md ">
               We know that reaching out for support or navigating a new platform
@@ -420,7 +420,7 @@ export default function SupportPage() {
               every step of the way.
             </p>
           </div>
-          <div className="w-full flex justify-center mb-12 sm:mb-25 md:mb-56">
+          <div className="w-full flex justify-center mb-12 sm:mb-25 md:mb-48">
             {/* Mobile Layout */}
             <div className="flex md:hidden flex-col gap-3 w-full max-w-md px-4">
               {/* Input */}
