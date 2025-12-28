@@ -6,5 +6,5 @@ export const ROUTES = {
   RESOURCES: "",
   COMMUNITY: "/marketing/community",
   CONTACT: "/contact",
-  LOGIN: "/auth/login", // <-- Change when you move folder
+  LOGIN: "/auth/login", 
 };
