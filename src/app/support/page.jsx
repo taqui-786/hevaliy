@@ -92,11 +92,11 @@ function HelpCentreNav({ isMobile = false }) {
         "border-r h-full border-gray-100 pr-6 sticky top-0 self-start"
       }`}
     >
-      <h3 className="text-sm text-gray-800 mb-4 font-medium">Help Centre</h3>
+      <h3 className="text-sm text-gray-800 mb-2 lg:mb-4 font-medium">Help Centre</h3>
       <p className="text-xs text-gray-600 mb-6">Find answers and get support</p>
 
       <div className="py-3">
-        <ul className="space-y-5">
+        <ul className="space-y-5 pl-4">
           {navItems.map((section, index) => (
             <li key={index}>
               <button

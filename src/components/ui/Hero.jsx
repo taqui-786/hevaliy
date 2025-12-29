@@ -30,7 +30,7 @@ export default function Hero() {
       />
 
       {/* Main Center Content */}
-      <div className="absolute md:inset-0  top-147 left-0   flex flex-col md:items-center md:justify-center md:text-center  px-6">
+      <div className="absolute md:inset-0   left-0   flex flex-col md:items-center md:justify-center md:text-center  px-6">
         <h1
           className="
           text-5xl lg:text-7xl md:text-6xl font-extrabold

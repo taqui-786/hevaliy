@@ -19,7 +19,7 @@ export default function ContactPage() {
       <Navbar />
 
       {/* Added responsive padding but kept lg view same */}
-      <main className="grow max-w-5xl mx-auto py-2 md:py-16 w-full p-8 sm:px-12 lg:px-0">
+      <main className="grow max-w-5xl mx-auto pt-16 md:pt-48 pb-16 w-full p-8 sm:px-12 lg:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-50  gap-10 lg:mb-38 lg:mt-12 my-10 ">
           {/* LEFT SIDE */}
           <div className="md:pt-4 lg:pt-8">
