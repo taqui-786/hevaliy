@@ -50,7 +50,7 @@ export default function AboutPage() {
         {/* --- Hero Grid Images --- */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 h-auto md:h-[650px] px-4 md:px-20">
           {/* Left Large Image */}
-          <div className="relative w-full aspect-3/4 sm:h-64 md:h-full rounded-2xl overflow-hidden">
+          <div className="relative w-full aspect-3/4 sm:h-64 md:w-[85%] lg:w-full md:h-auto rounded-2xl overflow-hidden">
             <Image
               src="/images/Rectangle 42030.png"
               alt="Portrait of a man"
@@ -60,7 +60,7 @@ export default function AboutPage() {
           </div>
           {/* Right Column Stacked Images */}
           <div className="flex flex-col gap-4 h-auto md:h-full">
-            <div className="relative w-full aspect-2620/1604 sm:h-1/2 rounded-2xl overflow-hidden">
+            <div className="relative w-full aspect-2620/1604 sm:h-1/2 md:h-1/3 lg:h-1/2 rounded-2xl overflow-hidden">
               <Image
                 src="/images/Rectangle 42031.png"
                 alt="Team meeting"
@@ -68,7 +68,7 @@ export default function AboutPage() {
                 className="object-cover"
               />
             </div>
-            <div className="relative w-full aspect-2440/1500 sm:h-1/2 rounded-2xl overflow-hidden">
+            <div className="relative w-full aspect-2440/1500 sm:h-1/2 md:h-1/3 lg:h-1/2 rounded-2xl overflow-hidden">
               <Image
                 src="/images/Rectangle 42032.png"
                 alt="People working together"

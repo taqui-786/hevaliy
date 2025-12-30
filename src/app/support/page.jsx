@@ -92,7 +92,9 @@ function HelpCentreNav({ isMobile = false }) {
         "border-r h-full border-gray-100 pr-6 sticky top-0 self-start"
       }`}
     >
-      <h3 className="text-sm text-gray-800 mb-2 lg:mb-4 font-medium">Help Centre</h3>
+      <h3 className="text-sm text-gray-800 mb-2 lg:mb-4 font-medium">
+        Help Centre
+      </h3>
       <p className="text-xs text-gray-600 mb-6">Find answers and get support</p>
 
       <div className="py-3">
@@ -272,7 +274,7 @@ function GettingStartedAccordion() {
   return (
     <>
       {/* For tablet and desktop - accordion style */}
-      <div className="grow pt-8 max-w-5xl bg-gray-100 p-6 md:p-8 lg:pl-28 border border-gray-200 lg:border-l-2 border-t-0 border-b-0 border-r-0 ">
+      <div className="grow pt-8 max-w-5xl bg-gray-50/40 p-6 md:p-8 lg:pl-28 border border-gray-200/50 lg:border-l-2 border-t-0 border-b-0 border-r-0 ">
         {/* Mobile: Collapsible Getting Started Header */}
         <div className="md:hidden">
           <button
@@ -396,7 +398,6 @@ export default function SupportPage() {
         backgroundRepeat: "repeat",
         backgroundSize: "contain", // or "auto"
         backgroundPosition: "center",
-        mixBlendMode: "screen",
         backgroundColor: "#fff",
       }}
     >
@@ -521,13 +522,14 @@ export default function SupportPage() {
           </div>
 
           {/* --- 3. Main Content Columns (Sidebar + Guide) --- */}
-          <div className="flex flex-col lg:flex-row mb-12 md:mb-32 p-0">
+          <div className="flex flex-col lg:flex-row mb-12 md:mb-32 p-0 ">
             {/* Left Sidebar (Desktop Only) */}
             <div className="w-57 hidden lg:block">
               <HelpCentreNav />
             </div>
 
             {/* Right Content - Guide */}
+
             <GettingStartedAccordion />
           </div>
         </div>
