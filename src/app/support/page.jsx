@@ -171,8 +171,8 @@ function GettingStartedAccordion() {
       content: (
         <ul className="text-sm text-gray-600 list-disc ml-5 space-y-1">
           <li>
-            Click the <sub className="font-bold text-[13px]">Sign Up</sub> or{" "}
-            <sub className="font-bold text-[13px]">Create Account</sub> button.
+            Click the <sub className="font-bold text-[13px]"><a href="/auth/register" className="font-bold text-[13px]">Sign Up</a></sub> or{" "}
+            <sub className="font-bold text-[13px]"><a href="/auth/register" className="font-bold text-[13px]">Create Account</a></sub> button.
           </li>
           <li>You can join with an email or continue anonymously.</li>
           <li>
@@ -207,18 +207,18 @@ function GettingStartedAccordion() {
       content: (
         <ul className="text-sm text-gray-600 list-disc ml-5 space-y-1">
           <li>
-            The <sub className="font-bold text-[13px]">Home</sub> shows the
+            The <sub className="font-bold text-[13px]"><a href="/home" className="font-bold text-[13px]">Home</a></sub> shows the
             navigation bar to access{" "}
-            <sub className="font-bold text-[13px]">Support Chats</sub>,{" "}
-            <sub className="font-bold text-[13px]">Journal Community</sub>, or{" "}
-            <sub className="font-bold text-[13px]">Resources</sub>.
+            <sub className="font-bold text-[13px]"><a href="/support" className="font-bold text-[13px]">Support Chats</a></sub>,{" "}
+            <sub className="font-bold text-[13px]"><a href="/community" className="font-bold text-[13px]">Journal Community</a></sub>, or{" "}
+            <sub className="font-bold text-[13px]"><a href="/resources" className="font-bold text-[13px]">Resources</a></sub>.
           </li>
           <li>
-            The <sub className="font-bold text-[13px]">Home</sub> tab shows your
+            The <sub className="font-bold text-[13px]"><a href="/home" className="font-bold text-[13px]">Home</a></sub> tab shows your
             mood tracker, daily affirmations, and quick tools.
           </li>
           <li>
-            The <sub className="font-bold text-[13px]">Support</sub> tab lets
+            The <sub className="font-bold text-[13px]"><a href="/support" >Support</a></sub> tab lets
             you book professional counseling or find a therapist.
           </li>
         </ul>
@@ -230,13 +230,13 @@ function GettingStartedAccordion() {
         <ul className="text-sm text-gray-600 list-disc ml-5 space-y-1">
           <li>
             Try the{" "}
-            <sub className="font-bold text-[13px]">Quick Comfort Journey</sub> —
+            <sub className="font-bold text-[13px]"><a href="/support">Quick Comfort Journey</a></sub> —
             a safe space just for you.
           </li>
           <li>
             Join a beginner-friendly community circle like{" "}
-            <sub className="font-bold text-[13px]">Calm Corner</sub> or{" "}
-            <sub className="font-bold text-[13px]">Letting Go</sub>.
+            <sub className="font-bold text-[13px]"><a href="/community">Calm Corner</a></sub> or{" "}
+            <sub className="font-bold text-[13px]"><a href="/community">Letting Go</a></sub>.
           </li>
           <li>
             Spend five minutes with simple breathing exercises or guided
