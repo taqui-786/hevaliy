@@ -341,7 +341,7 @@ function GettingStartedAccordion() {
             Getting Started
           </h2>
 
-          <p className="text-[14px] text-gray-600 leading-relaxed mb-6 bg-[#F3F8FD] border-blue-100 border p-4 rounded-lg">
+          <p className="text-[14px] text-gray-600 leading-relaxed mb-6  border-blue-100 border p-4 rounded-lg">
             Welcome to Heartivy! We are really glad you are here. This guide
             will help you understand the platform and make the most of the
             emotional support tools we have built for you.
