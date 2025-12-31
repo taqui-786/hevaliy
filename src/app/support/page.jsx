@@ -171,8 +171,8 @@ function GettingStartedAccordion() {
       content: (
         <ul className="text-sm text-gray-600 list-disc ml-5 space-y-1">
           <li>
-            Click the <sub className="font-bold text-[13px]"><a href="/auth/register" className="font-bold text-[13px]">Sign Up</a></sub> or{" "}
-            <sub className="font-bold text-[13px]"><a href="/auth/register" className="font-bold text-[13px]">Create Account</a></sub> button.
+            Click the <span className="font-bold text-[13px]"><a href="/auth/register">Sign Up</a></span> or{" "}
+            <span className="font-bold text-[13px]"><a href="/auth/register">Create Account</a></span> button.
           </li>
           <li>You can join with an email or continue anonymously.</li>
           <li>
@@ -207,18 +207,18 @@ function GettingStartedAccordion() {
       content: (
         <ul className="text-sm text-gray-600 list-disc ml-5 space-y-1">
           <li>
-            The <sub className="font-bold text-[13px]"><a href="/home" className="font-bold text-[13px]">Home</a></sub> shows the
+            The <span className="font-bold text-[13px]"><a href="/home" >Home</a></span> shows the
             navigation bar to access{" "}
-            <sub className="font-bold text-[13px]"><a href="/support" className="font-bold text-[13px]">Support Chats</a></sub>,{" "}
-            <sub className="font-bold text-[13px]"><a href="/community" className="font-bold text-[13px]">Journal Community</a></sub>, or{" "}
-            <sub className="font-bold text-[13px]"><a href="/resources" className="font-bold text-[13px]">Resources</a></sub>.
+            <span className="font-bold text-[13px]"><a href="/support" >Support Chats</a></span>,{" "}
+            <span className="font-bold text-[13px]"><a href="/community" >Journal Community</a></span>, or{" "}
+            <span className="font-bold text-[13px]"><a href="/resources" >Resources</a></span>.
           </li>
           <li>
-            The <sub className="font-bold text-[13px]"><a href="/home" className="font-bold text-[13px]">Home</a></sub> tab shows your
-            mood tracker, daily affirmations, and quick tools.
+            The <span className="font-bold text-[13px]"><a href="/home" >Home</a></span> tab shows your
+          spaood tracker, daily affirmations, and quick tools.
           </li>
           <li>
-            The <sub className="font-bold text-[13px]"><a href="/support" >Support</a></sub> tab lets
+            The <span className="font-bold text-[13px]"><a href="/support" >Support</a></span> tab lets
             you book professional counseling or find a therapist.
           </li>
         </ul>
@@ -230,13 +230,13 @@ function GettingStartedAccordion() {
         <ul className="text-sm text-gray-600 list-disc ml-5 space-y-1">
           <li>
             Try the{" "}
-            <sub className="font-bold text-[13px]"><a href="/support">Quick Comfort Journey</a></sub> —
+            <span className="font-bold text-[13px]"><a href="/support">Quick Comfort Journey</a></span> —
             a safe space just for you.
           </li>
           <li>
             Join a beginner-friendly community circle like{" "}
-            <sub className="font-bold text-[13px]"><a href="/community">Calm Corner</a></sub> or{" "}
-            <sub className="font-bold text-[13px]"><a href="/community">Letting Go</a></sub>.
+            <span className="font-bold text-[13px]"><a href="/community">Calm Corner</a></span> or{" "}
+            <span className="font-bold text-[13px]"><a href="/community">Letting Go</a></span>.
           </li>
           <li>
             Spend five minutes with simple breathing exercises or guided
@@ -254,11 +254,11 @@ function GettingStartedAccordion() {
             anytime.
           </p>
           <p className="text-sm text-gray-600">
-            <sub className="font-bold text-[13px]">Visit</sub> Support Talk to
+            <span className="font-bold text-[13px]">Visit</span> Support Talk to
             Us
           </p>
           <p className="text-sm text-gray-600 mt-1">
-            <sub className="font-bold text-[13px]">Or email us at</sub>:{" "}
+            <span className="font-bold text-[13px]">Or email us at</span>:{" "}
             <a
               href="mailto:support@heartivy.com"
               className="text-purple-600 hover:underline"
@@ -404,8 +404,8 @@ export default function SupportPage() {
       {/* 1. Import Header/Navbar */}
       <Navbar />
 
-      <main className="grow flex lg:block">
-        <div className=" w-57 hidden md:block lg:hidden px-2 mt-16 h-full overflow-hidden ">
+      <main className="grow flex xl:block">
+        <div className=" w-57 hidden md:block xl:hidden px-2 mt-16 h-full overflow-hidden ">
           <HelpCentreNav isMobile={true} />
         </div>
         <div
@@ -524,7 +524,7 @@ export default function SupportPage() {
           {/* --- 3. Main Content Columns (Sidebar + Guide) --- */}
           <div className="flex flex-col lg:flex-row mb-12 md:mb-32 p-0 ">
             {/* Left Sidebar (Desktop Only) */}
-            <div className="w-57 hidden lg:block">
+            <div className="w-57 hidden xl:block">
               <HelpCentreNav />
             </div>
 
